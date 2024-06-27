@@ -1,0 +1,13 @@
+﻿{
+  "Id": "JBGJVz9AvEOsW1fXgIwdoQ",
+  "Reference": "P_nk8H1LrUKoOb7bK9UBIw/JBGJVz9AvEOsW1fXgIwdoQ",
+  "ParentRef": "P_nk8H1LrUKoOb7bK9UBIw/gPf6tzczK06lBaHLd8FSDQ",
+  "Name": "Afwijkend SV Dagen per periode",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2024-02-01T14:55:01.9579075Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2024-02-01T14:55:01.9579075Z"
+}

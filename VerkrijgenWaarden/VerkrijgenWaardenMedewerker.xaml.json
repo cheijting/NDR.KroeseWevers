@@ -1,0 +1,31 @@
+{
+  "DisplayName": "VerkrijgenWaardenMedewerker",
+  "Tooltip": "We match values from Controle Vaste Gegevens file and send out a dictionary file with all values used in Loket",
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_MedewerkerMutaties",
+      "DisplayName": "in_MedewerkerMutaties",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_WaardenMutaties",
+      "DisplayName": "out_WaardenMutaties",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "Dictionary",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    }
+  ]
+}

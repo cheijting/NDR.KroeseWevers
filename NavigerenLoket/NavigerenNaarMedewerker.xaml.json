@@ -1,0 +1,53 @@
+{
+  "DisplayName": "NavigerenNaarMedewerker",
+  "Tooltip": "An employee is searched in Loket. In some situations the 'Salarisnummer' is obtained from the employee table. If the 'Salarisnummer' is already known, that value is used. For mutations 'Opnieuw in dienst' the check end date does not apply, that is why the distinction is made using the boolean in argument.",
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_MedewerkerMutaties",
+      "DisplayName": "in_MedewerkerMutaties",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_MedewerkerOpnieuwInDienst",
+      "DisplayName": "in_MedewerkerOpnieuwInDienst",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "Toggle",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_MedewerkerOpnieuwInDienst",
+      "DisplayName": "out_MedewerkerOpnieuwInDienst",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "Toggle",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_Salarisnummer",
+      "DisplayName": "in_Salarisnummer",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    }
+  ]
+}

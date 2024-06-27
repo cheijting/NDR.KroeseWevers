@@ -1,0 +1,31 @@
+{
+  "DisplayName": "VerkrijgenEersteDagPeriode",
+  "Tooltip": "For contract mutations the first day of the period should be used instead of the actual value of 'Ingangsdatum'. So based on the value of 'Ingangsdatum' the first day of that specific period is sent as an out argument.",
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "out_Ingangsdatum",
+      "DisplayName": "out_Ingangsdatum",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_Ingangsdatum",
+      "DisplayName": "in_Ingangsdatum",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    }
+  ]
+}

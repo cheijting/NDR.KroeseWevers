@@ -1,0 +1,389 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="NavigerenOpslaan" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Error or warning message thrown in Loket (if thrown)." Name="out_ErrorWarning" Type="OutArgument(x:String)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:String))">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:Annotation.AnnotationText>UPTF0000015CeyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoiVGhpcyBmaWxlIHByZXNzZXMgYW55IHNhdmUgYnV0dG9uIGFuZCBjaGVja3MgZm9yIGVycm9ycyBvciB3YXJuaW5nLiBXaGVuIGFuIGVycm9yIG9jY3VycywgaXQgc3RvcHMgdGhlIGN1cnJlbnQgbXV0YXRpb24gYW5kIHNlbmRzIHRoZSBtZXNzYWdlIGluIGFuIG91dCBhcmd1bWVudC4iLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
+  <sap:VirtualizedContainerService.HintSize>1668,4333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>NavigerenOpslaan_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="This file presses any save button and checks for errors or warning. When an error occurs, it stops the current mutation and sends the message in an out argument." DisplayName="NavigerenOpslaan" sap:VirtualizedContainerService.HintSize="1678,4268" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Loket.nl" sap:VirtualizedContainerService.HintSize="1616,4157" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1582,3900" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click Opslaan" sap:VirtualizedContainerService.HintSize="1520,193" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="3" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://app.loket.nl/employer/805b1510-4231-413f-801f-45bf4d3987e1/employment/3a64ceaf-22e5-4d93-bcb8-5d1bd34a4e7a/details?payrollAdministrationId=34e4f237-3a13-4f12-a671-4a945c410840" DesignTimeRectangle="1047, 223, 40, 40" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'BUTTON details-start-da…'" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Opslaan' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' aaname='Opslaan' type='submit' class='btn btn-primary btn-circle ng-star-inserted' /&gt;" Guid="77f0804f-e7ae-4dd1-b5e3-6e4436d6a1e8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJ0SURBVFhH7Zm/axNhGMf9K1TwB4qgSBzM6GJVUDMYFBEXd4dKwPrrBhcVkqGgUuxgCYV2sB0KdSvpUFwyGYWA10FKI5JBzqkZwsER+ZonfZ/Le9cnsc3lcle5D3yne973/dzxvi/H+x7APuP/Ea58reHxsw/I3n6NM+ee4uDR8VBDY9BYT4yFzti92CFs2w5e5j/i8PEHYsejCI39qu3gOC1l1cUjbK7XceHiC7GTKHLpar7jpOMRpreSGkYZctJxhT9XNnHoWHTToFfISf/KrjBNdqlBHEJujCucuTEpFschN++8UZaa8Kmzj8TiOCR13lCWmrBUGKcwiXBYYRLhsMIkwj2TXUXZamLL+o6prPD8H2FGI5yex4qlBmpjlWbluj5hRiA8iRnTUaMQDr4UDKGuf5iQhQ3kSg01wjZWaR4psbZ/mFCFM8U6bNU/YZtryAh1uwkTmnBqogpt2rY/bRW5tFy7mzCDC7cX0qLZgGVW8Ny/6tNLKG+pjgm7jpkBdgY9zMDC9z1zs4ny9Fs1N/2LrIGVib0vMn+YgYVThZpnfhL2RgVzn/QXcfCtOJz/bCbAHDZwq1DFT7+1xqA7ghQm+KIbm8Wc2VS9dAmyI0hhggt3Ql97vbsrBNwRpDBDElYZW8Dyxi8sjwvPAoYZrnCIYRLhsMIkwmGFcYXpsEIqjEPEg5S7996JxXEIuTGucByPWjn6kasrvFmzcORkTmwQZU6cfojaj9/KUhMmpqZXxUZR5n1xTdlt4xFutf7gyvWC2DCKXL6W7zjpeIQJupShORP1pQxdDJGLnx3CDF090cn3qK+96KptT9decWefCQN/AeIjZ+gGW2HpAAAAAElFTkSuQmCC" InformativeScreenshot="86c28dd7932394f40dc13f724fc74ac7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State Warning" sap:VirtualizedContainerService.HintSize="1520,529" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="2" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NGetText DisplayName="Get Text Warning" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" TextString="[out_ErrorWarning]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/c514bc91-cee7-4f74-b92d-54f460401299/employment/9dec8a15-e37f-40cf-8730-6a11f3cc5c4f/employment-conditions/payments?payrollAdministrationId=41549210-0d7e-46f6-aa96-72a2ce4c5435" DesignTimeRectangle="1180, 215, 720, 26" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Ingangsdatum mag'" FullSelectorArgument="&lt;webctrl parentid='body-box' tag='DIV' class='p-toast-detail*' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='loket-table-p-sidebar' tag='P' parentclass='alert alert-danger reverse ng-star-inserted' type='' class='ng-star-inserted' /&gt;" Guid="3c9c6b7d-3be1-4526-bc24-3b61f8446d67" ImageBase64="" InformativeScreenshot="c6a420523c70c74de4b741dcf3e90515.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/c514bc91-cee7-4f74-b92d-54f460401299/employment/9dec8a15-e37f-40cf-8730-6a11f3cc5c4f/details?payrollAdministrationId=41549210-0d7e-46f6-aa96-72a2ce4c5435" DesignTimeRectangle="12, 78, 0, 0" DesignTimeScaleFactor="1" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='body-box' tag='DIV' class='p-toast-detail*' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='body-box' tag='SPAN' type='' class='ng-tns-c156-2029 p-toast-message-icon pi pi-exclamation-triangle ng-star-inserted' aaname='' /&gt;" Guid="0bf101d8-42c4-4c47-9adb-116e24758164" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADwAAAAsCAYAAAA5KtvpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARZSURBVGhD3ZrbbxtVEMbPX5q0KSZXIcQLFSAkkBAIhKBPfUK8AFUpLUQIFVSgBBHIxYnju9eXxLfYqXGq0hbSS7IfM+sdYcLY2cZnUbw/6dOuvHPO6POcPbPrxNydngCrOz2J32cm0SHdmTnnqU1qzZ7D7sx5NEmNWdYU6nSseccp79jThbGQ2WezMxPokOGOb7RF5jyTZKxnjoOnUCXtzLEuYJtFn3tHX5UxkOlKVcnwnlfRXiX3P3wVTxbfwtHiK3A/n4X76cRYSzC9JTyJNpncZbMvxPDo+ttwP5tUB46rBMOVZbN8j3bfu4ijGy+pA8ZdguGNiSvLG9DBDaqsEhwFCYbvWd6Y9i+9RheitYz7JRjeoHgHfkwblBYYFQmGlzK3mcPFi2pgVCSYGven+efgXn1eDYyKBFMlw6U5MqwEhaKfLwHOLaDwnXeuxoQgwfATUnE+pgZZ1dUYUFsDXNdPTfA5fcbX1DEWJZgyGS78D4aR/ooMHvpp++DP6Jo2xqYEU6b7N3TDN18HHnT8lAp0jWPUsZYkmBIZzs+Hu2Gh9COl6lvK/4GuUYw21pYEMhxDLkzDSx8Aj+776Rgy90erp/4vgWI4Vp3DggTjUIVzCyEtad6oWkk/lc/jh3Bvv++Jz/8FxYa1gQnGmaMKL4RU4ZWPgKcHfiqfYYYplseoc40ogSocQzaMJf3li0C37KfpY5hhhsbwWHXOESSEZ3jrGnD01E/Tx0mGaQyPVeccQYJ3D2cXptWgU4vb0P22n+IYJxlmQmhTQiiGh7ahIIZDaFOCcbJ5ZLbSatCp9MO7wME9f3qFQIYJmoPnUnOcQoJ1w6jH/akHENQw04hba1OCXcPLl4Enf/lTD2LAg4eGxTYl2DM8qA2NiqU2JdgzPKgNHYffjrqVnrS3p+NYalOCcXIFZBIpNSiwuLp3q/6UJ9DO9O5Lfuyk80Dca8L9+mU9d0AJdgwH2YCEjvOPYToPhGx0Wu6AEmhJk+FRl/T37wxvRf3wrxyyafX/+jEMblGUQ80dUIJX4WySlpkSFFhcreNvRTa5k++tCi13QAmmkMuTYQub1rdv+K3GMjQnz63mfAYJpph3Rq+w6It5uPFPvF8kbYjn8ubUcj2jBFMsOMilsmpQlCSYUqGIfDoH9/qCGhgVCabslFDI5HE44i541iWYilMGb1x/Ln+sBkZFgtkuVVCi+7ieWoV75bwaHAUJplrZAVeZH0AerFxRg6MgwdR3atgpbXtVdjJZHH3DfxjXB42zBNOo1uFVuVgG92QnncJDvp+j+k8tu/Um6lWqcnm7t7TpUTOfzmI3sYSDpcs4vPkm3Gtz6iTjJMG0my00ag3U/KXNprnS3Kr4CSydSCK5uYWt9U0k1jawuRrHxso64r+x1rD+K2v1zGvp1m2kN5Mwe609tMh0U0xzpWl5e/c0bWT8UMLG+Y0qReZTbH4jgWScjvGE90V44vMzrOWffkEhm8ffRPqp0KaKsoEAAAAASUVORK5CYII=" InformativeScreenshot="4c6e21f729fce758216afbff710aeb3d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NCheckState DisplayName="Check App State Error" sap:VirtualizedContainerService.HintSize="1520,489" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="1" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NGetText DisplayName="Get Text Error" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" TextString="[out_ErrorWarning]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/c514bc91-cee7-4f74-b92d-54f460401299/employment/9dec8a15-e37f-40cf-8730-6a11f3cc5c4f/employment-conditions/payments?payrollAdministrationId=41549210-0d7e-46f6-aa96-72a2ce4c5435" DesignTimeRectangle="1180, 215, 720, 26" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Ingangsdatum mag'" FullSelectorArgument="&lt;webctrl parentid='loket-table-p-sidebar' tag='P' parentclass='alert alert-danger reverse ng-star-inserted' idx='*' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='loket-table-p-sidebar' tag='P' parentclass='alert alert-danger reverse ng-star-inserted' type='' class='ng-star-inserted' /&gt;" Guid="3c9c6b7d-3be1-4526-bc24-3b61f8446d67" ImageBase64="" InformativeScreenshot="c6a420523c70c74de4b741dcf3e90515.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/c514bc91-cee7-4f74-b92d-54f460401299/employment/9dec8a15-e37f-40cf-8730-6a11f3cc5c4f/employment-conditions/payments?payrollAdministrationId=41549210-0d7e-46f6-aa96-72a2ce4c5435" DesignTimeRectangle="1180, 183, 720, 24" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Het verzoek'" FullSelectorArgument="&lt;webctrl parentclass='alert alert-danger*' idx='*' /&gt;" FuzzySelectorArgument="&lt;webctrl parentclass='alert alert-danger*' tag='H5' type='' class='ng-star-inserted' aaname='Het verzoek is ontvangen maar kon niet worden verwerkt.' check:text='Het verzoek is ontvangen maar kon niet worden verwerkt.' /&gt;" Guid="b70397ca-fb11-4e84-ac49-aec2ad0e5130" ImageBase64="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" InformativeScreenshot="98197acc532bc4633449f801f8d45494.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NCheckState DisplayName="Check App State Error" sap:VirtualizedContainerService.HintSize="1520,489" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="0" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NGetText DisplayName="Get Text Error" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" TextString="[out_ErrorWarning]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/371a20d4-4f75-43a9-b492-4c40f5e3b206/employment/3a64ceaf-22e5-4d93-bcb8-5d1bd34a4e7a/details?payrollAdministrationId=39be01b2-340a-4a56-bca1-6103bb193bd3" DesignTimeRectangle="341, 595, 692, 44" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Er zijn'" FullSelectorArgument="&lt;webctrl tag='SPAN' parentclass='*alert alert-danger reverse ng-star-inserted' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' parentclass='*alert alert-danger reverse ng-star-inserted' type='' class='ng-star-inserted' /&gt;" Guid="6b6bc1ac-f494-4cfe-98d1-907c2f494d77" ImageBase64="" InformativeScreenshot="fb012eabe9d21d764e4629af78675368.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/371a20d4-4f75-43a9-b492-4c40f5e3b206/employment/3a64ceaf-22e5-4d93-bcb8-5d1bd34a4e7a/details?payrollAdministrationId=39be01b2-340a-4a56-bca1-6103bb193bd3" DesignTimeRectangle="341, 593, 746, 48" DesignTimeScaleFactor="1" FriendlyName="'Er zijn'" FullSelectorArgument="&lt;webctrl tag='SPAN' parentclass='*alert alert-danger reverse ng-star-inserted' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='*alert alert-danger reverse ng-star-inserted' type='' aaname='' check:text='Er zijn nog mutaties na de datum uit dienst aanwezig bij de volgende gegevensgroepen: beloning,' /&gt;" Guid="8f1d07c9-1711-41b3-a3a0-de7daf034434" ImageBase64="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" InformativeScreenshot="04ba5adc81e53a1dfc28b89d61d1dc1e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NCheckState DisplayName="Check App State Opslaan button" sap:VirtualizedContainerService.HintSize="1520,1054" sap2010:WorkflowViewState.IdRef="NCheckState_1" Mode="WaitDisappear" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="1" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not disappear" sap:VirtualizedContainerService.HintSize="1016,837" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheckState DisplayName="Check App State Error" sap:VirtualizedContainerService.HintSize="954,489" sap2010:WorkflowViewState.IdRef="NCheckState_5" Timeout="1" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NGetText DisplayName="Get Text Error" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" TextString="[out_ErrorWarning]" Version="V3">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/cb8f2738-f520-4625-aeab-9dafa9bda935/employment/3a64ceaf-22e5-4d93-bcb8-5d1bd34a4e7a/employee?payrollAdministrationId=c8f80d16-b1cd-4008-9382-d3e1df3cab53" DesignTimeRectangle="742, 907, 254, 18" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'De waarde'" FullSelectorArgument="&lt;webctrl tag='P' aaname='*' parentclass='error-container ng-star-inserted' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' parentclass='error-container ng-star-inserted' type='' class='ellipsis error-text' /&gt;" Guid="1e817abd-6930-4871-aaab-e8690425ff8c" ImageBase64="" InformativeScreenshot="0473cb2632a3c39f61bd354124d53b0e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          </uix:NGetText.Target>
+                        </uix:NGetText>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/cb8f2738-f520-4625-aeab-9dafa9bda935/employment/3a64ceaf-22e5-4d93-bcb8-5d1bd34a4e7a/payroll/bank-payment?payrollAdministrationId=c8f80d16-b1cd-4008-9382-d3e1df3cab53" DesignTimeRectangle="722, 649, 12, 13" DesignTimeScaleFactor="1" FriendlyName="'EM'" FullSelectorArgument="&lt;webctrl tag='EM' parentclass='error-container ng-star-inserted' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='EM' parentclass='error-container ng-star-inserted' type='' class='icon icon-info' aaname='' /&gt;" Guid="09d51c68-670f-41a5-82a3-113662d54025" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABASURBVDhP7dG7CQAxDATR7b9h6wdrF+DETHac4IFQMIlkOH/gG4GZMaFYYUIZaUKVZUJdbULdZwH4F27HFzAw3g/nNJ1LDHn7AAAAAElFTkSuQmCC" InformativeScreenshot="3ce2e3f4dc6554fbe51c79fae4e868f4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Cancel" sap:VirtualizedContainerService.HintSize="954,193" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://app.loket.nl/employer/153efd1f-9720-4b87-8102-701eb340b919/employment/82d35ece-ebf0-475c-a1f8-ea8405ac3551/details?payrollAdministrationId=e6c3bf8e-75c5-4ba5-ae51-d40d8d6f6522" DesignTimeRectangle="1010, 234, 18, 18" DesignTimeScaleFactor="1" FriendlyName="'EM'" FullSelectorArgument="&lt;webctrl parentid='*cancel' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='*cancel' tag='EM' type='' class='icon icon-cancel' aaname='' /&gt;" Guid="a0593834-8271-472c-b0f3-d92c3bae425b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADZSURBVEhLY/hPIzBqMBzQ1+DLi7r+B7jV/E9b9BgqggkIqcFi8On/JVpZ/8VkIDhgNqbGy7Mb/6tA5cW0Jv/fCxVHBlgM/vh/W0Ux3GB0w1EMBWKriuP/P0DlkAGOMH7+f10WuuH3MA3N2vv/IVQHOsATeZiGI2N8hoIAHoNBALvhhAwFAQIGY4YpCGOLUHSA12BshhJrOE6DMSNq9f+ZGBGK23CsBuOOfWypBbvhWAxGzSCYEYVmODkZBHfsIwwnMYP8///9w1coCzfApwanwZSCUYOh4P9/AEd6yt69NLBYAAAAAElFTkSuQmCC" InformativeScreenshot="d6e558a6595736b28f74a5abe4bc1007.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://app.loket.nl/employer/805b1510-4231-413f-801f-45bf4d3987e1/employment/3a64ceaf-22e5-4d93-bcb8-5d1bd34a4e7a/details?payrollAdministrationId=34e4f237-3a13-4f12-a671-4a945c410840" DesignTimeRectangle="1047, 223, 40, 40" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'BUTTON details-start-da…'" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Opslaan' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' aaname='Opslaan' type='submit' class='btn btn-primary btn-circle ng-star-inserted' /&gt;" Guid="2ae4951b-ee92-44ff-9a7b-77446395989b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJ0SURBVFhH7Zm/axNhGMf9K1TwB4qgSBzM6GJVUDMYFBEXd4dKwPrrBhcVkqGgUuxgCYV2sB0KdSvpUFwyGYWA10FKI5JBzqkZwsER+ZonfZ/Le9cnsc3lcle5D3yne973/dzxvi/H+x7APuP/Ea58reHxsw/I3n6NM+ee4uDR8VBDY9BYT4yFzti92CFs2w5e5j/i8PEHYsejCI39qu3gOC1l1cUjbK7XceHiC7GTKHLpar7jpOMRpreSGkYZctJxhT9XNnHoWHTToFfISf/KrjBNdqlBHEJujCucuTEpFschN++8UZaa8Kmzj8TiOCR13lCWmrBUGKcwiXBYYRLhsMIkwj2TXUXZamLL+o6prPD8H2FGI5yex4qlBmpjlWbluj5hRiA8iRnTUaMQDr4UDKGuf5iQhQ3kSg01wjZWaR4psbZ/mFCFM8U6bNU/YZtryAh1uwkTmnBqogpt2rY/bRW5tFy7mzCDC7cX0qLZgGVW8Ny/6tNLKG+pjgm7jpkBdgY9zMDC9z1zs4ny9Fs1N/2LrIGVib0vMn+YgYVThZpnfhL2RgVzn/QXcfCtOJz/bCbAHDZwq1DFT7+1xqA7ghQm+KIbm8Wc2VS9dAmyI0hhggt3Ql97vbsrBNwRpDBDElYZW8Dyxi8sjwvPAoYZrnCIYRLhsMIkwmGFcYXpsEIqjEPEg5S7996JxXEIuTGucByPWjn6kasrvFmzcORkTmwQZU6cfojaj9/KUhMmpqZXxUZR5n1xTdlt4xFutf7gyvWC2DCKXL6W7zjpeIQJupShORP1pQxdDJGLnx3CDF090cn3qK+96KptT9decWefCQN/AeIjZ+gGW2HpAAAAAElFTkSuQmCC" InformativeScreenshot="c7e50b05bd18a9ad0f89646e644880d6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <uix:NCheckState DisplayName="Check App State Onopgeslagen wijzigingen" sap:VirtualizedContainerService.HintSize="1520,831" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="2" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="572,614" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Ja'" sap:VirtualizedContainerService.HintSize="510,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4fe99b83-9267-462c-9e74-c297bb0e3e31" InformativeScreenshot="f6b592bf7c073eac21346a884d806a1b" Selector="&lt;webctrl id='*confirm-cancel' tag='BUTTON' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                  <If Condition="[string.IsNullOrEmpty(out_ErrorWarning)]" sap:VirtualizedContainerService.HintSize="510,352" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[out_ErrorWarning]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String" xml:space="preserve">Mutatie kon niet worden opgeslagen. </InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_16" />
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/c514bc91-cee7-4f74-b92d-54f460401299/employment/9dec8a15-e37f-40cf-8730-6a11f3cc5c4f/employment-conditions/payments?payrollAdministrationId=41549210-0d7e-46f6-aa96-72a2ce4c5435" DesignTimeRectangle="1180, 115, 504, 14" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Er zijn'" FullSelectorArgument="&lt;webctrl aaname='*Er zijn niet-opgeslagen wijzigingen die verloren zullen gaan. Wil je doorgaan?*' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Er zijn niet-opgeslagen wijzigingen die verloren zullen gaan. Wil je doorgaan? ' tag='P' type='' class='sidebar-toolbar-comment ng-star-inserted' check:text='Er zijn niet-opgeslagen wijzigingen die verloren zullen gaan. Wil je doorgaan?' /&gt;" Guid="530656ad-fd9f-4fd8-8f05-28899a16679e" ImageBase64="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" InformativeScreenshot="e3af153dd3b0be614102d52cd12e1e99.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAOKSURBVFhH3ZZbSFRRFIZ9EXooSQrCSnzyJcmgDLKHwhC6gkbQQ0lIkS+iiQmmVgQlFgQZFVL0EJQIoURpipiSmualybzlZWa0TMfU8ZbOjDNnzvydtUaHQbfjmUMU9PAz5+yz917fWuvfmwlwyjL+pf4PAEv/N1hGTMJva8kDMFrfDH1ePsYKnmG8qgaOqSnMdXZjzqDnZ+9Fy9WVnI5PIeH4WfBA+N2XPACURXdGJjpPnGaZy96gK/ECdBG7+H26phb9F5NhTDyPieIShjOXVcI+Oob5qvdo3bEbbTFH+N07wFoStkCan4ZktXCgdmXj9n2xDEQAX8IiYUzNwMi9AjQGhXBgAtFfzma4+abmFfv5khDABvAv9dWYloGumDiYHhdiKDMLLVF7eWz2dSUH7DubwC3riU9AQ+AGDN7OX7GfL6k2oXXGCmPuHaUa0VwBAmrcFsHVGX9XgR/XbnCFqFKi9atJNQCp7+YtNAWHYijlCren58w5Lv34q7dsQmoJjYvWria/AMgXFIyCUOCG9Zs4c/LA8KV0DCSlYa6jV7h2NfkFsKSFsVEYUlLxPSkZw8+L0Bl5AB8CN2Lw0X3hfF/SBEBVIMPRMZ2tq4chO5OPID2L5vuSJgBqBR1DU3YOPodH4cvBY3xhieauJU0AS8eUvNAQvJWPo8OysGKeGmkCIBlyrnpuSOuUWThHjTQBzLW08wnoPhon/O6PNAP0JqTw5eQyV0Oe9N98S9LcApJrohxScRCc3bnC72qkGcDl+AV77SEGoCqI5qiRJgAquVx/nDOXTNrLT9IEYK0/DMeTAEitSZBmvgrnqJVqgKWzL+sfQtale+QoXMdjy+erlV8VoHJTQOfLzZBGSmHvz4OrfOdfBBh4AdvHk5DrTsHZcZ0NKNfEQprsgNUxKVyzllQDSNM6yKVhcJZuYRCSs3o/+4DMSJXQchzVAyhZkvNt5VFuHyiZu4q3u4ManzIAmZOOp2j9alINIJtK3P1Wys/HkExYEQ2p9y4/EwzdCw5TNY+RR1x233/nSeoBlKBSxR53GxYzZjMqweid29EU7wG1lIS6vwn28pZqAMrGpkvhClCWFIjNuNgCgiE4aaiIW8VXtALF4FQRxTO0bnmLVAOQHO0ZfAHRxt7jtKk82+sOZhnm8sttWe42LbaLK6RUkM3rtdYvAKZXsqWM/DUbidYs94VfAH9eMn4DZlj8Q7FuwpsAAAAASUVORK5CYII=" InformativeScreenshot="149543e872cdea13b8fff5f21b808074.jpg" Selector="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" Title="Loket.nl" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

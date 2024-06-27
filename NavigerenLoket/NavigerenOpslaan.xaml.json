@@ -1,0 +1,31 @@
+{
+  "DisplayName": "NavigerenOpslaan",
+  "Tooltip": "This file presses any save button and checks for errors or warning. When an error occurs, it stops the current mutation and sends the message in an out argument.",
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "out_ErrorWarning",
+      "DisplayName": "out_ErrorWarning",
+      "Category": null,
+      "Tooltip": "Error or warning message thrown in Loket (if thrown).",
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_Config",
+      "DisplayName": "in_Config",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "Dictionary",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    }
+  ]
+}

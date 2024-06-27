@@ -1,0 +1,14 @@
+﻿{
+  "Id": "8dfh1EPoFUKoZFjKjpuemg",
+  "Reference": "P_nk8H1LrUKoOb7bK9UBIw/8dfh1EPoFUKoZFjKjpuemg",
+  "Name": "Loket",
+  "Type": "App",
+  "Created": "2024-01-25T12:19:04.2428545Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2024-02-01T12:59:55.4173013Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

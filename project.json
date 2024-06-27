@@ -1,0 +1,80 @@
+{
+  "name": "NDR.KroeseWevers",
+  "description": "Library of Kroesewevers (Loket & Dotweb)",
+  "main": "NewActivity.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "2.20.3",
+    "UiPath.System.Activities": "23.4.3",
+    "UiPath.UIAutomation.Activities": "23.4.7"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.4.3.0",
+  "projectVersion": "1.0.69",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Library",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "12bd7af2-3b74-4ffd-8b43-de3d429f392d",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\VerkrijgenWaardenMedewerkerTest.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "db3f8b42-5baf-42e8-9333-8bad1684d815",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\NavigerenNaarSupermarktTest.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "b169651e-fcaf-4d14-8ec8-12313e0820b3",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\NavigerenNieuwDienstverbandTest.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "f6a8ebfd-7fca-4d0e-bfcc-088ef4677f62",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\NavigerenNaarMedewerkerTest.xaml"
+      }
+    ],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

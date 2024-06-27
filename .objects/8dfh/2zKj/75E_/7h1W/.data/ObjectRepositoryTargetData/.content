@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="cM0vpHZ0nEuGeqAJHhQ3dg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://app.loket.nl/employer/f88a22b1-f01d-4800-b5c7-a0518bfb6932/collective-mutations/leave?payrollAdministrationId=c843d09f-c1a7-48a2-bbbc-e7f2d8d6fccb" DesignTimeRectangle="604, 166, 24, 24" DesignTimeScaleFactor="1" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl parentid='administration-selector-dropdown' class='*dropdown-trigger*' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='administration-selector-dropdown' class='*dropdown-trigger*' tag='DIV' type='' aaname='' /&gt;" Guid="3e3683d2-611a-4a81-9740-1f3903780db3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAEXSURBVEhL7ZPNCgFRGIbdhZXrsZCNBQulJIqS8lNuwUIpG0kpyR1I3IRyAURICIUii0/vZNScM2fmHCZZzFNfnZ/ve59mpvHQj3GFjuMKHed/hNfrjfqDMQ1HE21th2y/qfB+f1Cx3COvL6NVKtOiw/HyuuXBHXr0fswiwwxT4XJ1IH+g8g6wkrIyFGaRYYbwCfOlriEElSt0DFKsccb2pbNt4WsVfsPd/kzxZJML06UiGWYwK0IoBKv1kWKJBheaTLe0Ys/RixkrLIVgvthTJFrnwtlCD3rtsBUCO6msDEgJwXS2pVC4xslwhjtZpIWAlarKgJIQQBAMVbVSlQFlIcBPvdmcXjs1PhJ+gyt0HFfoOD8WEj0Bb/h5IE4T2MoAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="1ab0b8e5e2fefd77790d6620b31aef55.png" xmlns="">0O9Wnm4Z1_E6Fl7QWqduZsA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

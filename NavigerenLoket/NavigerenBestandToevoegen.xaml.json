@@ -1,0 +1,20 @@
+{
+  "DisplayName": "NavigerenBestandToevoegen",
+  "Tooltip": "This file types the Filename and opens the file",
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_FilePath",
+      "DisplayName": "in_FilePath",
+      "Category": null,
+      "Tooltip": "File to be opened",
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    }
+  ]
+}

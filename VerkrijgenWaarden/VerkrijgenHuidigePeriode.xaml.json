@@ -1,0 +1,86 @@
+{
+  "DisplayName": "VerkrijgenHuidigePeriode",
+  "Tooltip": "Based on the year within the mutation is processed and the to be processed period, the first & last day of that period is sent as an out argument. Also period notations matching Loket are out arguments (used for examlple in adding 'Loonaangifte')",
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "out_EersteDagPeriode",
+      "DisplayName": "out_EersteDagPeriode",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "Datetime",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_EersteDagPeriode_String",
+      "DisplayName": "out_EersteDagPeriode_String",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_LaatsteDagPeriode",
+      "DisplayName": "out_LaatsteDagPeriode",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "Datetime",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_LaatsteDagPeriode_String",
+      "DisplayName": "out_LaatsteDagPeriode_String",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_Periode",
+      "DisplayName": "in_Periode",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_PeriodeNotatie",
+      "DisplayName": "out_PeriodeNotatie",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_PeriodeNotatie2",
+      "DisplayName": "out_PeriodeNotatie2",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    }
+  ]
+}

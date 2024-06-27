@@ -1,0 +1,42 @@
+{
+  "DisplayName": "VerkrijgenSalarisschaal",
+  "Tooltip": "Out of the value 'Loonschaalgroep' and 'Trede' we create the 'Salarisschaal' in format: 'Schaal [Letter 'Loonschaalgroep'], [Trede] jaar/ [Number 'Loonschaalgroep'] functiejaar. Example: Schaal B, 21 jaar/1 functiejaar",
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "out_Salarisschaal",
+      "DisplayName": "out_Salarisschaal",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_Trede",
+      "DisplayName": "in_Trede",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_Loonschaalgroep",
+      "DisplayName": "in_Loonschaalgroep",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    }
+  ]
+}

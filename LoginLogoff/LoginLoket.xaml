@@ -1,0 +1,277 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_OrchestratorFolderPath="RPA001_MedewerkerMutatiesVerloningSupermarkten" this:Main.in_LoginLoketURL="https://login.loket.nl/" this:Main.in_AssetName="LoginLoketCredentials" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_OrchestratorFolderPath" Type="InArgument(x:String)" />
+    <x:Property Name="in_LoginLoketURL" Type="InArgument(x:String)" />
+    <x:Property Name="in_AssetName" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1668,3280</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="LoginLoket" sap:VirtualizedContainerService.HintSize="1678,3215" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="Gebruikersnaam" />
+      <Variable x:TypeArguments="ss:SecureString" Name="Wachtwoord" />
+      <Variable x:TypeArguments="x:Boolean" Name="LoggedIn" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1616,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Login Loket - Start&quot;]" />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_AssetName]" CacheStrategy="None" DisplayName="Get Credential Loket" FolderPath="[in_OrchestratorFolderPath]" sap:VirtualizedContainerService.HintSize="1616,144" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Wachtwoord]" Username="[Gebruikersnaam]" />
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="1616,135" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="msedge" />
+    <uix:NCheckState DisplayName="Check App State Home" sap:VirtualizedContainerService.HintSize="1616,2562" sap2010:WorkflowViewState.IdRef="NCheckState_3" Timeout="5" Version="V3">
+      <uix:NCheckState.IfExists>
+        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,260" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,145" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Already logged in - Actions will be skipped&quot;]" />
+        </Sequence>
+      </uix:NCheckState.IfExists>
+      <uix:NCheckState.IfNotExists>
+        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="1112,2343" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Private: Login" sap:VirtualizedContainerService.HintSize="1050,2228" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="702ddb44-47a9-402a-9804-454b56a3b529" Version="V2" WindowResize="Maximize">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,2010" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Gebruikersnaam'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,219" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="702ddb44-47a9-402a-9804-454b56a3b529" Text="[Gebruikersnaam]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://login.loket.nl/" ContentHash="v8yHKLgjQUCZzb18vh1spg" DesignTimeRectangle="44, 531, 463, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="''Gebruikersnaam''" FullSelectorArgument="&lt;webctrl id='username' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='username' tag='INPUT' type='text' class='form-control valid' aaname='' /&gt;" Guid="19fca2cf-fd1e-40db-9452-5e18cdc71f5e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdMAAAAsCAYAAAA+TVLVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAARCSURBVHhe7dvBSxVBHMDx/oouRQQFkgl269If0CEPehAhgg6dgghSn5fgkeAlUShNCPGYlwTp0CEQ9SiZt/TmO+RBUwLzkCDGr53Z2dmd2Xm6sj7J5/cDQ+zs7O57p6+z5iUBAAClEFMAAEqqG9PllZr0Vj5IR9eItLT1y+WrTxkMBoPBYARGLqb7+wfyamhWB3R49LMsLK7J9s6eOQsAAHxOTL+vbsiV68+k59G4bG7umlkAAHAUJ6aD0Y60++GYOQIAAEXYmH5dXtevdre22JECAHASNqZ9A9PysvrRHAEAgKJsTO8/eC2zn76ZIwAAUJSN6Y1bL+THxi9zBAAAirIxVX8nAwAATo6YAgBQEjEFAKAkYgoAQEnEFACAkogpAAAlnXpM16eq0to9I+vmWKvNSGf7M2mtLMlcJfrXPz8/Ia3tEzJnDjV9TVUma/Ghvk7dIzv8+xwn9BwAAEo6g5guSW8Uvs6pjfgwELQklL3zZkJR6zL30WuiGGcFw3yUU4nphkx2e5/VcILvfdZYfO2JfwgAAPzXGhxTE49sWLwdZ7ymKr2VahrciL5P5rpQTPP3OkYDYxr63tnvEz/bhJaYAkBTaWhM452aH694p2pjpIKo1gd2otkYFYtpfO+6u8MkptmwheKq75vex34Obz49530npV64ve8JADj/GhdTEyxnd2Y4oVTrVPR0qJL45Hd/+ZiaXa+9xnudnJzPXpNENDOXC74JZvps/76BcDqf3dBzgV0zMQWAptOYmKpgqeBUVLzyQfF3r3GoMgENhCiOXn4kUXNfsxr+fXRM/d2iG8d8tCPOdUV3oWodMQWAi6BxMdVBCuwOFRsfdT4Njg1rIDhO5AI7wWAE/fDVjZ4b9HQXajhRPklMvXUKMQWAptPg/4AU0SHyomLjpIKTRkhfGwUx+TfLj6UNr1Yn2k4oI8dGz1ufcL5DIJKBuLsBziCmANB0Gh/TiA6hM2de6arXwLnwTkTz+aDldp5erELPzQUtFFNvTXCH61wXiGloLhjuCDEFgKZzJjGNg+XGRkcrmnOjGUcp+7vQRChy7py/qwzsVnXgjlmT+6zh+/qxd793eI1GTAGg6ZxNTCN63t9J1otm4PVocMdowpdGK42xHv56E7I582w9QmEz903W5KJooqxH5hnJDwj+vOKcsyOwcwUAnDunHlMAAC4aYgoAQEnEFACAkogpAAAlEVMAAEoipgAAlERMAQAoycb09p0B2d7+bY4AAEBRNqbdD8dkfmHVHAEAgKJsTAeHZuXtuy/mCAAAFGVjul77KXfvVWV394+ZAQAARdiYKm/Gv8jjJ+/NEQAAKMKJ6eHhX7l287n0PBqXzc1dMwsAAI7ixFTZ3z/Qvz9taeuX4dHPsrC4Jts7e+YsAADw5WKaWF6pSd/AtHR0jeiwqr9DZTAYDAaDkR91YwoAAIohpgAAlCLyD0n/peAGWK1rAAAAAElFTkSuQmCC" InformativeScreenshot="372e7c2079b17ecc525266be3170b288.png" IsResponsive="True" Reference="P_nk8H1LrUKoOb7bK9UBIw/6fzc76g4ska4Ic2GeKc4JA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="44, 507, 100, 24" ElementType="Text" FriendlyName="''Gebruikersnaam''" FullSelectorArgument="&lt;webctrl tag='LABEL' aaname='Gebruikersnaam' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' aaname='Gebruikersnaam' type='' class='' check:text='Gebruikersnaam' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAcCAYAAACNr/p2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJ8SURBVGhD7ZY7bgIxEIZzCqociiKnSE1BwS2oIo6QHnED7gAlHUhBQiERQmLix4x3Zuxd8tgklphfsoKxPY//8y65A1PVMkCVywBVLgNUuQxQ5TJAlcsAVS4DVLkMUOXqEdASRvePMBgvcd6D1s8wdDGHs02YrmYTGNxP4GkdpjehHBCaMkjjs4b8AqDFNNaAMQ0QGkI31iuY8vAMK5y36xcAKd04IDT4Ggz1hI0W+H0CNI1/w2BmhnN+jvvY5+ZCbODpwa1RDVdecfNxzCPXKfcU5uFbdsnoicT4dF7sx5yjBdXJ1ryyNwxbo/rZuvZnOFuyPb4Xfob5hWoAKTPKUoaGhqlAaojmlFg2Lhv6PqDsaQq1KHji1djMvfT5lcs192Zmdcoa/blkOu2luH6ecqj+kz+Us2Wu3kANILxdKTndtjBikthUbnA8kycQJiizo+KZLwOaqVrpHG+OXR4NIwj7k/U4ZXUWYiepepVkXu2PPluOdfUJ4lDkK6EZbYAE9N4ANXmbc5g7Gx2AnEQ8qvszgMTldUOYqmvpC1DJYCcOiH/OlZ8XxvQJyOUQsUsmMsm9BXVeJBk7XlKVl+pVT6XM+2NAToXHPiYhKAUI7kcuCtf03hazo5SxdDM7AamGlTn8tbdCIEVAbn/ay/N0AlIm4l6ayzy4t1dAXpQ0DdVYAqHX4/fivx+eLGscRVD8cMWHG6oMKANyorMaMI2icV5kHhsUoxOQE8/h4s997NQn98blW/hY0p+fAzJVJQNUuQxQ5TJAlcsAVS4DVLkMUOVqBXQ+n+FwOMJ+f4Ddbg/b7YuNfxhFQK+vbwHK8fgOp9MZLpcLrpj+VgAfKGQxeT2GPmUAAAAASUVORK5CYII=" SearchSteps="Selector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Volgende'" sap:VirtualizedContainerService.HintSize="954,195" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="702ddb44-47a9-402a-9804-454b56a3b529" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://login.loket.nl/" DesignTimeRectangle="44, 643, 508, 40" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Volgende'" FullSelectorArgument="&lt;webctrl tag='BUTTON' id='login-btn' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' id='login-btn' type='' class='btn btn-primary' aaname='    &amp;#x9;&amp;#x9;&amp;#x9;Volgende     ' check:text='Volgende' /&gt;" Guid="b6c1ee9b-a3ab-4624-9690-2975408d63f4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAgAAAAAsCAYAAAATiQCeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAASGSURBVHhe7dw/axRdGMZhP4UKalAEg5girY2o4J/CIIjY2G+xYqEmptVAUggKooVhsdQ2XYjFfgFDIJBYuhZWsbMKLJHjntl5zpxz5pk1i+6sO/O74Sre3ZlxU/je98wGjxhCCCGE1C4MAEIIIaSGKRwAm1sd8+TpBzN356WZnlkwR082AQDAf852tu3u+cWPSZcXJTcA9ve75vnymjk+9UC9MAAAmAy2y5d6nd7tHqQtnyUYALtfvpuLl56pFwEAAJPp8rXlpOP9BAPArgTtRAAAMNlsx/txA+Dz5ldz7BSP/QEAqCLb8f5TADcA7C8LaCcAAIBqsF0vcQPg5q0X6sEAAKAabt99lba+NwDOnn+sHgwAAKrhwuxi2vreANAOBAAA1SJhAAAAUCMSBgAAADUiYQAAAFAjEgYAAAA1ImEAAJOsuW327F/gvW3T0N4fo9Xd5H8tZqelvw9gPCQMAKBEUopmt51/X8rcfDer8XtFGAAAhiRhAABlaqX/DKdS2I2Nn/33tHFQhAEAYEgSBgBQqrbZSf7G/TTrTf/192a9f/s/XGEyAAAMScIAAEomxbi38d57XYZB+PjfPRVIE57TUzQA5EmDkqyQs9HRTzRK5Nr2iUR0Pa3U3dcbNr1zCgdA/NmGeeIB4K9JGABA2aQA/eLLvRaXsxf/PG0ADCh/m34hy+CI440AubYaf6gM+Ky9+AMgHjQujACgNBIGAFC6/N1+7m7ZlbhXtK6QlZL2BkD+CYMUdHYtV8TeefKaO88fAK6gs+GQ/6z6eMgGgHJuwZMPAKMjYQAApYu/788XtP41gfK6MgByRe6uLwUd/7dIy1iupVzbisfKnz5rbihEd/vyebNRAGCUJAwAYAyCks4VbTwQ8ue5ElVLOrvTDuKOKXhfMqIB4D57QRgAQDkkDABgHPxyTe+M/QL9U6m61w87AIL3i54ARP7xACh6AgCgXBIGADAW2WP/naQoozL+i98B6N9pDy737G48/O690WpnZX/IAaBey31+/84+GybhWGibVe7+gdJIGADAmASPxKOS9b8GyCW4g/bu9uV1r3zjZMVb/DWAK+xDDoBB17LJjot+Zj+5nx/AqEgYAMC4uDv6+I44I2Ur0Y7LjpE78AHjoRe/kOPr2/cazfTPOPQAsMIRYD+nlH14XI/3cyex1+/9mQwAoBwSBgBQMUlBK3fUUtxFYwNAPUgYAEClyJ14+N2+f4eeuyMHUCsSBgBQMfFj/SD8Bj5QexIGAFBB2gjgzh+AJWEAAABQIxIGAAAANSJxA+DC7KJ6IAAAqAbb9RI3AO7df6MeDAAAqsF2vcQNgKXlNfVgAABQDbbrJW4AfO3smRNnHqonAACAyXb63CPT+fYjbX1vANi8fvtJPQkAAEy2d6122vb9BAPg4OCXuXpjRT0RAABMpivXV5KO9xMMAJv9/W7yHcHxqQfqRQAAwGSwXf681+m22+PkBoBkc6tj5hc/mrk7L830zIJ6YQAA8H+xnW27+8nTD0mXF6VwABBCCCGkumEAEEIIIbWLMb8B75UYqt7Cm5EAAAAASUVORK5CYII=" InformativeScreenshot="05fb41a1e7dfbd2f53be4edf8fb9e7f3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="262, 654, 72, 18" ElementType="Text" FriendlyName="'Volgende'" FullSelectorArgument="&lt;webctrl parentid='login-btn' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='login-btn' tag='DIV' type='' class='' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;Volgende   ' check:innerText='Volgende' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEwAAAAWCAYAAABqgnq6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIXSURBVFhH7ZVNjsIwDIXnFKw4Xxe9EUJcA7HhDkhwA1YsOYEnaet/J7Ri6ADqk96CJnHtz075Wa1bWDzeC7CJXoBN9AJsol8HrD3BDZJuJ2ii9X/05pITAzhv4/WaCRgGgcvRbaLi4Qobu1bytwNbba99lKDA5nDv1yKYJX89sPURzl2YO+xbuWkH+368pr3g+4FxoNthJzYhSH0daeoG6TPJJWA4yYG4AG5SL9NEjJ0n3sSLINDnJiudKQKzuQU3Sn/08YDc6J7ZYoTkuQhYBVZWXwA2yEpAw9ihZGMruSZJYHYASAaaBhZMk+sGFS0SowKCogQwP8FYEMeixMU5fEbnJDAqiEH7XGPYDCw4W7hZBpj9XvmC4msbPA+AucIpPhZkf6OH5DFWEDvbNvdRrg6smSbMlyE6YKYol5gF6s/RS8OiuJNKtKewjnoRMMq9oCowlcxAXr7wURL0fCwwtV6aMOM/BlaasMgemLiG5y6wSf6Jb1jfyToM7rb+djTbI8MZCSyMRfnLyeFGarjpH1VMV3YAzIyoSUpeSyfVITFN+Fwka8WJlq8lFTgSWC1WFu8zNUuZd4TAeGIscTYmh4r28R7scAV2kizAxs9rTTu8YzSwbA0t54lw9L5kUXenHD+98zGwF7kryE0sF1pqzjt5RmDYaf1tkhPgOv6Gnn/CShrxD/UOnhVYdgTtEyYLPTuwz3YLv7bpOSneiwG4AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="Label 'Wachtwoord'" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Target>
+                          <uix:TargetAnchorable BrowserURL="https://login.loket.nl/login" DesignTimeRectangle="44, 595, 76, 24" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Wachtwoord'" FullSelectorArgument="&lt;webctrl aaname='Wachtwoord' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Wachtwoord' tag='LABEL' type='' class='' check:innerText='Wachtwoord' /&gt;" Guid="ee944194-367d-4144-b3b4-e1962ffb9867" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAcCAYAAAD2izi6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJpSURBVGhD7ZYxa1tBDMfzKTpl7tKv0uEF/CkyBrd4yJLBS6GTJ+O5k4dOMSGQ2UPo2sGGLllKxyyBLMrpJN3pdO/FiY8EF/SHIzmdnk76Se/hI3A1yQE2ygE2ygE2ygE2ygE2ygE2ygE2ygE26n0BbpfQHZ9Ct7hjw38mzn98xfsgBngH89EpfDiewYoMvcWuJsbntdoJcA1jk+BBaRggwGZxHuCcw3yr9wHYZE0GgZz2e2gXwJ4ED0rPAbSHOG3dCCHKxNF0SPE0jXlZKKkBcXFjEsBljEVnHJ/PimduxJ9ji09qIuVUNVliVM1mf14651hP8LeDo+voJrOCEUp9AzUgSmQcCu1M8fRw8B0tYYP/BhFMO71qvw2JqRhDTSnvQDEQuetqRsXIvvA3vnyWIRnYHEsPTISkoFofgZnzKwCqVzRejgDIFoPGYAPfv+Iik6hWVZS6E1UBlKTpXvyfpoCao89ssSiCkp/VTbXAtS/JNATVk58CyEHwAUxGBw4FxgR0MLkAYfGKgStISnsAzGDIN/9V+Qa3GlBpqwGVtvp8D4DS0TFDS7YQZK5sEijt33AC82uO300FYxJyCs+mWIcwgQmMdlK2oWTpcrtXyYZPQUzihQDzOUnip2LiGxJeZ3VnVXAV6yXfwHJCCXr2sXtUCVAuKToltp5kk518dOBUNK9YyC6AQZIkxTU2A9oWbPPScUm5Fly6UX0AUboO+fXwDEDXa+UAG+UAG+UAG+UAG+UAG+UAGzUI8PbXHzj7+gM+n3yHj5++pN9CvspVAXx4eISL6c8IbfrtEq5vfsPff/d86ioF8ASJsMv2l/zwGAAAAABJRU5ErkJggg==" InformativeScreenshot="7897b87dcb2b4b6575ab9935822866db.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:VerifyExecutionOptions.Target>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <uix:NCheckState DisplayName="Check App State 'Wachtwoord'" sap:VirtualizedContainerService.HintSize="954,553" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="702ddb44-47a9-402a-9804-454b56a3b529" Timeout="10" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,334" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Wachtwoord'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="Simulate" ScopeIdentifier="702ddb44-47a9-402a-9804-454b56a3b529" SecureText="[Wachtwoord]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://login.loket.nl/login" ContentHash="tJks7UK1SkyWkI0wQCvmZA" DesignTimeRectangle="44, 619, 463, 40" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="''Wachtwoord''" FullSelectorArgument="&lt;webctrl id='current-password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='current-password' tag='INPUT' type='password' class='form-control valid' aaname='' /&gt;" Guid="d93731fd-106f-49f2-b938-3f583f02e06b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdMAAAAsCAYAAAA+TVLVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKlSURBVHhe7ds9a1NhGIDh/AoXFURBUAcnJ4eODnbxY5Di4lQQRFDbDg6ikKVQitrFH2CHDmZysOgfsHbTdmoRpaUtiB+DBVEee9LTk7fmRI4n2bwueGjeJ2l56XKTQBoBAPRFTAGgTz1jurC4GrfGn8bwhak4fmosDhy6bowxxpiS6Yrp9vaPuN9stQPanHwe86+WYmPrW/4sAPCnfTF9++5jHDxyIy6PzMTa2pd8CwD8zb6YPth5R3rxyuP8BABUUcT09cJK+6Pd9XXvSAHgXxQxvTMxG+N35/ITAFBVEdNz5ydj7tmb/AQAVFXE9OiJW/H+w6f8BABUVcQ0+54MAPDvxBQA+iSmNTQaxb8NAMS0DjEFICWmNYgpACkxrUFMAUiJaQ1iCkBKTGsQUwBSYlqDmAKQEtMaxBSAlJjWIKYApAYc0+WYHmq0Y9MYbeW7Voxm550Zml7uvWuN7v5eYyg6L+veLU8P5bvRnb/Sa1d2j8HdLXsMAHsGG9MiOp3wdEKXzW7sundJ6LJpx65s1wldNruxK9mV3GOQd8t+AsAeMS12YgpAPYONaRqedvwyJR+blu2K2OXx67HrxG43fuW7snsM7m7ZYwDYM+CY/h/EFICUmNYgpgCkxLQGMQUgJaY1iCkAKTGtQUwBSIlpDWIKQEpMaxBTAFJiCgB9ElMA6FMR05OnJ2Jj82t+AgCqKmJ6eeRxzL98l58AgKqKmN5vtmLq0Yv8BABUVcR0ZXUzzpy9F58/f883AEAVRUwzD2dexNVrT/ITAFDFvpj+/PkrDh+7GZdGZmJt7Uu+BQD+Zl9MM9vbP+JBsxXHT41Fc/J5zL9aio2tb/mzAMCfumK6Z2FxNW5PzMbwhal2WLPvoRpjjDGme3rGFACoRkwBoC8RvwHHxQ/agvIYigAAAABJRU5ErkJggg==" InformativeScreenshot="963616d761e8c035633bbc07147d33f4.png" Reference="P_nk8H1LrUKoOb7bK9UBIw/FCOWUBjOcUisMQbcQvtL0A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="44, 595, 76, 24" ElementType="Text" FriendlyName="''Wachtwoord''" FullSelectorArgument="&lt;webctrl aaname='Wachtwoord' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Wachtwoord' tag='LABEL' type='' class='' check:innerText='Wachtwoord' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAcCAYAAAD2izi6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJpSURBVGhD7ZYxa1tBDMfzKTpl7tKv0uEF/CkyBrd4yJLBS6GTJ+O5k4dOMSGQ2UPo2sGGLllKxyyBLMrpJN3pdO/FiY8EF/SHIzmdnk76Se/hI3A1yQE2ygE2ygE2ygE2ygE2ygE2ygE2ygE26n0BbpfQHZ9Ct7hjw38mzn98xfsgBngH89EpfDiewYoMvcWuJsbntdoJcA1jk+BBaRggwGZxHuCcw3yr9wHYZE0GgZz2e2gXwJ4ED0rPAbSHOG3dCCHKxNF0SPE0jXlZKKkBcXFjEsBljEVnHJ/PimduxJ9ji09qIuVUNVliVM1mf14651hP8LeDo+voJrOCEUp9AzUgSmQcCu1M8fRw8B0tYYP/BhFMO71qvw2JqRhDTSnvQDEQuetqRsXIvvA3vnyWIRnYHEsPTISkoFofgZnzKwCqVzRejgDIFoPGYAPfv+Iik6hWVZS6E1UBlKTpXvyfpoCao89ssSiCkp/VTbXAtS/JNATVk58CyEHwAUxGBw4FxgR0MLkAYfGKgStISnsAzGDIN/9V+Qa3GlBpqwGVtvp8D4DS0TFDS7YQZK5sEijt33AC82uO300FYxJyCs+mWIcwgQmMdlK2oWTpcrtXyYZPQUzihQDzOUnip2LiGxJeZ3VnVXAV6yXfwHJCCXr2sXtUCVAuKToltp5kk518dOBUNK9YyC6AQZIkxTU2A9oWbPPScUm5Fly6UX0AUboO+fXwDEDXa+UAG+UAG+UAG+UAG+UAG+UAGzUI8PbXHzj7+gM+n3yHj5++pN9CvspVAXx4eISL6c8IbfrtEq5vfsPff/d86ioF8ASJsMv2l/zwGAAAAABJRU5ErkJggg==" SearchSteps="Selector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,206" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw Exception="[new ApplicationException(&quot;Login Loket failed&quot;)]" sap:VirtualizedContainerService.HintSize="388,91" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://login.loket.nl/login" DesignTimeRectangle="44, 580, 76, 24" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Wachtwoord'" FullSelectorArgument="&lt;webctrl aaname='Wachtwoord' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Wachtwoord' tag='LABEL' type='' class='' check:innerText='Wachtwoord' /&gt;" Guid="5e295cbe-866b-4823-8e80-4927a1702ff8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAcCAYAAAD2izi6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJkSURBVGhD7ZaxThxBDIZ5ilQ81Bb3DCnoIm1xxSkPkPZEcaKkPDqiE4qUmieggBMSEm8QhKIcicx4bM94PLsc3CjokPxLI248Xo/92bviAFxNcoCNcoCNcoCNcoCNcoCNcoCNcoCNcoCNel+A6yV0h0fQndyz4YOJ8+8veB/EAO9hMTmCT4dzWJFhsNjV1Pi8VVsBXkJvEtwrjQMEuDmZBTgzWKz1PgCbXpJBIKf9DtoGcCDBvdJLAO0hTls3QYgycTQdUjxNY14WSmpAXNyYBHAZY9EZx+ez4pmf4s+xxSc1kXKqmiwxqmazPy+dc6wn+NvB0XV003nBCKW+gRoQJdKHQjtTPD0cfCdLuMGfQQTTTq/ar0NiKsZYU8o7UAxE7rqYUzGyL/yNL59lSAY2x9IDEyEpqNZHYOb8CoDqFY2XIwCyxaAx2Mj3r7jIJKpVFaXuRFUAJWm6F3/TFFBz9JktFkVQ8rO6qRa49iWZhqAG8lMAOQg+gMnowKHAmIAOJhcgLF4xcAVJaQeAGQz55r8q3+BWAyptNaDSVp/vAFA62jO0ZAtBFsomgdL+P05gfs3xu6lgTENO4dkUax8mMIHRTso2lixdbvcq2fApiEm8EmA+J0n8VEx8Q8LrrO6sCq5iveYbWE4oQc8+do8qAcolRafENpBsspOPDpyK5hUL2QYwSJKkuMZmQNuCbV46LinXgks3agggStch/z28AND1VjnARjnARjnARjnARjnARjnARo0C/Hd7B39Ol/D72zE8fvkKj597XwOrBrh5gs3Z9whtc/4D/l5dA/x64ENXKYBn4UEl7rtFNPMAAAAASUVORK5CYII=" InformativeScreenshot="e1fcc0f23f6c6370a645acbfafa40fff.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Inloggen'" sap:VirtualizedContainerService.HintSize="954,158" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="702ddb44-47a9-402a-9804-454b56a3b529" Timeout="10" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://login.loket.nl/login" DesignTimeRectangle="298, 715, 254, 40" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Inloggen'" FullSelectorArgument="&lt;webctrl id='login-btn' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='login-btn' tag='BUTTON' type='submit' class='btn btn-primary' aaname='                              Inloggen                      ' check:innerText='Inloggen' /&gt;" Guid="3fa7876d-74ec-47c9-a103-12a52ba72236" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQIAAAAsCAYAAACOnraiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAPKSURBVHhe7Z1PSxVRHIb7FCVkUgRJ5KJtm6igP4skkGjT3sWVFuW/bQa6CAyiFom41G07scX9AokgaEtvC1e2cyWIcbpnZn5nzsz8ZgwUz70zzwsP6J1zjiPyPnNmEOaSIYQ0PoiAEFIugs2tjpmcWTWjY4tmeGTaXB5sAUCfYbtrOzw1uxZ1uiwFERwdHZu5+e9mYGhCXRgA+hPb6Q/dbh8fnyRtT5MRwe6vfXPv/nt1EQCoBw8ez0dd95MRgbWFNhEA6oXtuh8ngp+be+bKNW4HAJqA7bq/K3AisA8TtAkAUE9s5yVOBM+ef1QHA0A9efHyU9J+TwQ3b79TBwNAPblzdzZpvycCbSAA1BsJIgBoMBJEANBgJIgAoMFIEAFAg5Eggn5mOfmHkN22fhzgFCSIIDStbXNg/wAH22ZcO14FIoAzIkEEoUEEEBAJIggNIoCASBBBaDQRJAU/2Fgx4xuH0ddxDs16y5tbIYKl3fiQZGc5ezxC5itx4+X8lNjzk7Wqf96KWY8W2TdLg22zE41IgsSCIkEEoakQgRptXKZMuaJ58Ytb+TO6iYpcIQGbeD0peTGpDMrH2KiSggtBgghCc4oIXHldKb1dgSICt4NQ17NX5PgzuYKncvCv2rm1vPXjeco5ePOK5+WLoHgO7ArCIUEEoakSQaYgUqYqEaSF07fm6edS8qIIqkUj5ZV18t/HyFpSemVti/p7wkUiQQShOVcRyG1BrnBdijuAklsI/zw8gWSTL3hZEEGvI0EEoQm0I1BFkJFAdl4a7xagi74jyIMIehUJIgjNuYrg/58RxOOKO4cMybzKkru18yVve8JABL2KBBGE5iwikLndnLrl7yYd08UVuBg3zlu/EHdu2q4hTuXzB/8cEEEwJIggNGcRgV/CzLa+WM7iVb28wDYy3j3ZV+KLxe1Ekthj4y1E0OtIEEFDiQqekYf3uT1kixyVO/tMwOJKT4H7HgkiaCRy+5AveXpbsbNcchX3dhL+jgD6EwkiaChVW3650ue3+5kouwnoPySIoMFoMsg/S9BkwE6gPkgQAUCDkSACgAYjcSKwLzvQBgJAPVFfcPLq9Rd1MADUE9t5iRMBr0QHaBb+q9GdCPY6B+bqjTfqBACoF9dvvTWd33+S9nsisPn89Yc6CQDqxbfldtL6OBkRnJz8NY+eLqgTAaAePHyyEHXdT0YENkdHx9G9w8DQhLoIAPQnttNz3W7bjudTEIFkc6tjpmbXzOjYohkemVYXBoDexnbXdnhyZjXqdFlKRUAIaU4QASGNjzH/AIMKb3nwQgXNAAAAAElFTkSuQmCC" InformativeScreenshot="96afcf0c8c2459c0b308ff74a3a7be8d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="391, 726, 68, 18" ElementType="Text" FriendlyName="'Inloggen'" FullSelectorArgument="&lt;webctrl parentid='login-btn' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='login-btn' tag='DIV' type='' class='' aaname='                 Inloggen             ' check:innerText='Inloggen' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAWCAYAAABjadrAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHFSURBVFhH7ZVBjsMgDEXnFLPq+bLIjaqq16i6yR0qpTfoKsuegMEQg20MZKREZTR86UszAYz9MPTr+zSa7rw7oIo7oIo7oIr3A3R5GafnpI//UXNA48MsUOTyMAP9vsUdUMUdUMX/FtBa+HK/muH+dn97vc1tJGsLgM5PP4SaL3zcGdcrCvMxP0WQH8Yq73c1NxfkZc6nycxuxiol982AVGnz2CYiASJaUHEPK1dgAQ7Ix8PiU0VI+TkgeXi/AhSKCsmSLlIAhY5T48EJ+m944hEaPWURi8T365QcyLo0LwoozUF20XZAbCFuUgIUE9FbPH7H4lNA5QPAojCO/N8bYyEMJTZYrfNQQHi9RCLWacdkriLNg4DlkoXn1BygmHCtg1RADA5fF0WukrXeQdLNANr+Bvl5aacxr+uKxYfYsviJgPwUIFxrVb06VnGOdSgsVZhH4icKuWld5lV832gOhwGiybHrkSaddkG+MBDOD780iijw0LmrYGwY9wD0IbvCGVTyHYagQFc0f3PAAYYobC83AAivoSw+Xs/5kjl10nm0g/Z0Ox2U09oZ8towKd23l5sABNYgybdKg3RU56CbAdSmR/MD0OaPAXjgFuIAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NCheckState DisplayName="Check App State 'Werkgevers'" sap:VirtualizedContainerService.HintSize="954,610" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="702ddb44-47a9-402a-9804-454b56a3b529" Timeout="25" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,260" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,145" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Login Loket - End: Successful&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,391" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,145" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Login Loket - End: Unsuccessful&quot;]" />
+                        <Throw Exception="[new ApplicationException(&quot;Login Loket failed&quot;)]" sap:VirtualizedContainerService.HintSize="388,91" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="https://app.loket.nl/start" DesignTimeRectangle="341, 231, 558, 24" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Werkgevers'" FullSelectorArgument="&lt;webctrl aaname='Werkgevers' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Werkgevers' tag='H5' type='' class='' check:text='Werkgevers' /&gt;" Guid="182360b3-fc7e-456f-acaa-a46f1d25c04a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAjIAAAAcCAYAAAB79VU2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM2SURBVHhe7drBceIwFIDh7SGndJYDBwqhCGZyTA0MBVACXOkB0oRWsvXkpyfZcWwfouT/Zjyb1RKw96J/nvjnAAAAGkXIAACAZhEyAACgWYQMAABoFiEDAACaRcgAAIBmETIAAKBZPyNkbh/u5fXNvbzf4wIAAMDXUshc331I+JjYnT/jSvDpTvt+/XiLS527O4bweP1w17iyCiEDAAAWGCYy1ZiQYDGB87y4XVjfX9wjLq1CyAAAgAWGkKnFiazZ9a3Dg5ABAAALqO/IlMdFj/Oh+/uxO3ay6/a4aTiekiv79xhF3WRHwkVeUwsZ+5pAh5W59MRo/D6GCdPYvc97H2/qebzJ3wUAAJtQISPfhzm407Nf6Tbj/cVdu3Ax6+rv+rs09kobeJr4HFSMxDiyIZOCRX0HZyJiwtUHyNf3IRGWT3/k9+Tz1j1P+gxzETMAAGxLhcwwReg33Di9CBt+DI08FlRkpIlEZa2IE7UmstfK1ESHUj1AiqD6zn3UjtDkNaueR/5/9P3f3UlNegAAwDaykJHNuguWuFH38aKiRn5WIZAHkDDBkzZ+FQciRcIlTUKK6YUNCc9+7qz7qISGPSpb+zzDRCaPMQAAsK08ZPRkogsH2YjjJh7iRb+mIxv82GU2fj0JERIp+ipeN/Y5NlDGLhUcOthsoGzxPF5xvJRNbQAAwBbykFHTlv57McPmn45xzjoCevUJhjE3ZPyGPz0R0ZeKE2/WfXTUVKkIsw2eJyNHZXPuCwAAfIcJGYmFg9uFP/UmLVOMfX4M00khYo5Sbj5K4o+zQkb+TV5bmaJMxsCc+4j6WPHvX3vflc8T3luHnkxn9BoAAFjPhMwwjSg23hQXlQ1+4jgmvceckFFTkeLLvdnnmyv93oz7EClWwpVPdlY9z8R9MpEBAGBbRcjo73bkG6/a3Gsx4tnvhYRN//FcFjL6SEbWdWTZS4fK5H0k5ftbi5+nEkJEDAAA2ytC5qfqo8JOTlRsjMQIAAD4vRoJGZlwjB9p6YkMAAD4GxqbyAxHNdk1ctQFAAB+t2ZCJqjFDJMYAAD+rqZCBgAAQCNkAABAswgZAADQLEIGAAA0yrn/+NIFg5JtVsoAAAAASUVORK5CYII=" InformativeScreenshot="2269dbb8b786633184d1f36fb6fae807.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Edge" ContentHash="p8xBN9pCA0i_Y9Ty4Cr0iQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QQXCTgp6O/2bwAAAwBJREFUWEe91V1ozXEcx/Ezx9gDw2ZjJWolFnIykw2LYszTmhbNQ5ZhuRglhSuhJQ/b7CFrHmJJscnmauPYDEXbwpLc7MKFxxMulmWuNu/P6fcvIjn2/51vvTrn/Dq/7/f3//5/v//fo2ib6ZN45GAp5iAa4xALL5z/Bec4YcbmoxPnkKCxkEIToGI1eIYerMNRPEIDFmADtiEDWlgcRiART/Ad+fhtoX8NZwJ01VPgw1Qsx220Q4mr0I9erEIrbkGLzUMpchHaAv4UJokW48crHIaSn8dppEPFP6PcjOn7Fag7JtN/hhJA7Z2N3diBQnyEOpCNM6jAGhSgC7oVk2AyuRBKZujeX0AltFm1X4ZwBHtRi52IgZntUighluEtus13bdIyqANN0GJaEAUz06VQQkRCp6EERRiAWq6xYlRjH4L/txJOcqxEHS7jIL7gGpJhfQHa5XdwH2nQVfehGe7f/59DyaHnhY6jHljafNoHekDp+WHv6hVOAYyHNmIHBrELdos7YQrp/ZAKdUI7Pwn2F+AUQSb0AtIR1BPTfnGFKaTjqBfUJ2RpLGyhYhgJPRGL3td7IwONnuRAgycC9sMsIKJthm+aP2XeKIpuRRW8YVmAQoWMxfiAm4jUmPVQESMJ6/ECWWbMfphCCWjGWcxFeNqvIkYxBvEACxELu6ECRioKUIf96EYZRsNeKDmioQ0XgLqQji74YbcLSg6d9yZ8xSHUohI5CP7HSjjJsQcnzeciPMcAtqMQs+D+hlRCqP13MYQbyMYJlGIFdBxfQwtzN5QQMdB9r8cBHIcW8xh6IJXjEjIQnONamIS6/w/RjjysRQ2qsRq6+nfYAp2STUjB8N8RSoA46AT04xQq8AZXkWbGLiIXx9CLFkzG8EIJDCVX6/WpK2xDB5wO9EELyUcrGrEE6t506AmqF1gw3z+HMwF6833DPUyAkk2EuqONWILNUFFd/VOoG7plPeiEFjgGoYUmQO28jpdQ238J/TZ036MQj0SMRSbUuY3QogmP5wc+F6f1nNho7wAAAABJRU5ErkJggg==" InformativeScreenshot="5ed800b2d569c167de591a07620dceec.jpg" Reference="P_nk8H1LrUKoOb7bK9UBIw/dqzEbRnDRk-gvaV4oNvEGA" Selector="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" Title="Loket.nl" Url="[in_LoginLoketURL]" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </Sequence>
+      </uix:NCheckState.IfNotExists>
+      <uix:NCheckState.Target>
+        <uix:TargetAnchorable BrowserURL="https://app.loket.nl/start" DesignTimeRectangle="324, 86, 40, 40" DesignTimeScaleFactor="1" FriendlyName="'A'" FullSelectorArgument="&lt;webctrl parentid='breadcrumbs-home' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='breadcrumbs-home' tag='A' type='' class='bc-link' aaname='' /&gt;" Guid="3af60d24-a1a1-4049-ab69-b1b8b0e02521" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE2SURBVFhH7dahq8JQFMdx/wqTf4FJm8UmBptZEGyPFyYsWAzvXxiyYrMJggzE8YLhBYvRYjAoGDQ8xeD+gJ8DDU4P8767Hd4GJ3zTPTt80u7NeBcPaUrA3AmYOwFzJ2DuBMydgLkTsHc5YGp2UTIX2JPn0YoXfFyhVzOQzX3eqo2wPBJzEYoPvJmhUbhDHytYGG6Iec1iAe/dPorP0EAdtN0D+e1fiwg+Y2l/EUAqA1V7hRO5R70I4B2GTZOAhZdvzrAl96mlCd5hUKdBStW/tdGa4DlaFEQ5C1Ny7/sEnC3b6Ds/GDsTfJQf/smBkgKu+BdFYG6NXoWYSwq45RCzjvUylxywS8y6AqYPwksd+Nd/QnZeIGpgA3n/6al7RWuC/y8Bcydg7gTMnYC5EzB3AuYuZWAPV72OkCZBP6OAAAAAAElFTkSuQmCC" InformativeScreenshot="70b8436e4ead5732f37ca7a210d7de51.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+      </uix:NCheckState.Target>
+    </uix:NCheckState>
+  </Sequence>
+</Activity>

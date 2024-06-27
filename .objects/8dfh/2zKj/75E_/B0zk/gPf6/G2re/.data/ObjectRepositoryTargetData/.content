@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="8go-ltjlgEO-gjebZOa9qA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://proforma.loket.nl/employer/3f38942c-f502-452f-959d-f1874db77942/employment/3a64ceaf-22e5-4d93-bcb8-5d1bd34a4e7a/new?payrollAdministrationId=2eb5d036-59ce-4b9e-a5a5-ca407a7ea803" DesignTimeRectangle="1786, 226, 18, 18" DesignTimeScaleFactor="1" FriendlyName="'EM'" FullSelectorArgument="&lt;webctrl parentid='employ-wizard-close' tag='EM' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='employ-wizard-close' tag='EM' type='' class='icon icon-cancel' aaname='' /&gt;" Guid="7a79efb5-c744-4a3e-8db5-05703bc3396a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADQSURBVEhLY/hPIzBqMBzQz+CHj978T0qbDcYgNjZAjBoMg6fP2vtfTCYLjH0Ce//fu/8KKgMBID5IHKYGpB4bwDD4xMk7/63sG7Eajm4oSB1IPTaANYz37LuCYfiBg9cwDAWpwwVwRh664ciYkKEggNNgEMBmODGGggBeg9HDFISRwxwfwGkwNkNJMRyrwdhiv7tvK0qwEDIcw2BshsLCFD3M8RmOYTByBsEWUeiGk5xBsBkKAzDDQZikDPL1208wxgcIqcFqMDXAqMFQ8P8/AKo1z1JWUyY6AAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="f610390f1b32c71041c5562edb8bcdea.png" xmlns="">0QruuZ8DbtkmAUoNw6TDohw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

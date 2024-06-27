@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="2Hhz8h8VJ0m5FW8VG8TkNg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://proforma.loket.nl/employer/a54f1adc-3606-41ce-a4c9-2fa98e5be883/employment/dbe42655-4d4d-41f2-9a5a-521036c3354d/new?payrollAdministrationId=7c1e003d-6360-4855-b281-18cc99a0d3ed" DesignTimeRectangle="1096, 606, 295, 40" DesignTimeScaleFactor="1" FriendlyName="'Onbepaalde tijd'" FullSelectorArgument="&lt;webctrl parentid='employment-char-form-employment-duration-type' tag='SPAN' class='p-element p-dropdown-label p-inputtext ng-star-inserted' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='employment-char-form-employment-duration-type' tag='SPAN' class='p-element p-dropdown-label p-inputtext ng-star-inserted' type='' aaname='Onbepaalde tijd' check:text='Onbepaalde tijd' /&gt;" Guid="86fb2151-bd02-472f-ad04-f44d69cec823" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAFFSURBVEhLY/hPZzBqIdXBqIVUB4PHwn///v2/e+/F/yNHr/1/9/4LVBQ3IFY9TguPHrv+39Cs6L+Wfu5/v6C2/3fuPofKYAKQZRs2nYSrj4rt+//q9UeoLCrAaWHvhI1gzTCMy1J0y2D41JnbUBWoAKeFh49c+69nXIBiSHh0z/97919CVUAs27r97H8L23IUdSDHPXr0GqoKFeC08O/ff//XrDuG01Jclnn5Nf+/efMp1BRMgNNCEPjz5+//ZSsPYbV00tStWC27eOkBVDd2gNdCEABZOm/BXgxL0bGLR/3/M2fvQHXhBgQtBAFClhJrGQgQZSEIgCydNmM7hqV2ztX/j5+4CVVFGBBtIQigW0qqZSBAkoUgALJ08jRIgiHVMhAg2UIQ+Pnz9//nz99BeaQBsiykBIxaSHUwaiHVAZ0t/P8fAGLTin0HpcDsAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4" />
+      </TargetAnchorable.Anchors>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

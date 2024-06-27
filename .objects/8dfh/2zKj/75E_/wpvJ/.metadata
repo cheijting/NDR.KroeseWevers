@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Einddatum",
+  "Type": "Element",
+  "TaxonomyType": "Text",
+  "Id": "wpvJ0bQeGUGVKHzeuGEKMA",
+  "Reference": "P_nk8H1LrUKoOb7bK9UBIw/wpvJ0bQeGUGVKHzeuGEKMA",
+  "ParentRef": "P_nk8H1LrUKoOb7bK9UBIw/75E_0wlD-UK1qc3xSq9mcA",
+  "Created": "2024-01-26T10:38:47.2160518Z",
+  "Updated": "2024-01-26T10:38:47.2160518Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.4.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

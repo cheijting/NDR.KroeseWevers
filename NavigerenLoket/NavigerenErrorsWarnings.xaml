@@ -1,0 +1,127 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="NavigerenErrorsWarnings" VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap:VirtualizedContainerService.HintSize="1227.3333333333333,834" sap2010:WorkflowViewState.IdRef="NavigerenErrorsWarnings_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="NavigerenErrorsWarnings" sap:VirtualizedContainerService.HintSize="1112,769.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Navigatie" sap:VirtualizedContainerService.HintSize="1050,658.6666666666666" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="bdd2ebf8-9014-4f4d-9697-1644acdc891a" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,439.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State Error" sap:VirtualizedContainerService.HintSize="954,328.6666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="bdd2ebf8-9014-4f4d-9697-1644acdc891a" Timeout="5" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,107.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/c252bb7b-26b1-408a-bf25-f6e875b6012f/employment/39d8d06b-7373-424b-a212-81938567e57f/employment-conditions/payments?payrollAdministrationId=d96a29f7-5f03-473a-9d7c-47a31233e833" CvTextArgument="Het verzoek is ontvangen maar kon niet worden verwerkt." CvType="Text" DesignTimeRectangle="1140, 237, 720, 24" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Het verzoek'" FullSelectorArgument="&lt;webctrl parentclass='alert alert-danger*' /&gt;" FuzzySelectorArgument="&lt;webctrl parentclass='alert alert-danger*' tag='H5' type='' class='ng-star-inserted' aaname='Het verzoek is ontvangen maar kon niet worden verwerkt.' check:text='Het verzoek is ontvangen maar kon niet worden verwerkt.' /&gt;" Guid="7c9381a0-5889-4da8-98d7-beb153fbdd82" ImageBase64="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" InformativeScreenshot="618eb69621a37d909d90565454e7907c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" ContentHash="Mk0LTBsvl0up_fYlS1j3Qg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAOKSURBVFhH3ZZbSFRRFIZ9EXooSQrCSnzyJcmgDLKHwhC6gkbQQ0lIkS+iiQmmVgQlFgQZFVL0EJQIoURpipiSmualybzlZWa0TMfU8ZbOjDNnzvydtUaHQbfjmUMU9PAz5+yz917fWuvfmwlwyjL+pf4PAEv/N1hGTMJva8kDMFrfDH1ePsYKnmG8qgaOqSnMdXZjzqDnZ+9Fy9WVnI5PIeH4WfBA+N2XPACURXdGJjpPnGaZy96gK/ECdBG7+H26phb9F5NhTDyPieIShjOXVcI+Oob5qvdo3bEbbTFH+N07wFoStkCan4ZktXCgdmXj9n2xDEQAX8IiYUzNwMi9AjQGhXBgAtFfzma4+abmFfv5khDABvAv9dWYloGumDiYHhdiKDMLLVF7eWz2dSUH7DubwC3riU9AQ+AGDN7OX7GfL6k2oXXGCmPuHaUa0VwBAmrcFsHVGX9XgR/XbnCFqFKi9atJNQCp7+YtNAWHYijlCren58w5Lv34q7dsQmoJjYvWria/AMgXFIyCUOCG9Zs4c/LA8KV0DCSlYa6jV7h2NfkFsKSFsVEYUlLxPSkZw8+L0Bl5AB8CN2Lw0X3hfF/SBEBVIMPRMZ2tq4chO5OPID2L5vuSJgBqBR1DU3YOPodH4cvBY3xhieauJU0AS8eUvNAQvJWPo8OysGKeGmkCIBlyrnpuSOuUWThHjTQBzLW08wnoPhon/O6PNAP0JqTw5eQyV0Oe9N98S9LcApJrohxScRCc3bnC72qkGcDl+AV77SEGoCqI5qiRJgAquVx/nDOXTNrLT9IEYK0/DMeTAEitSZBmvgrnqJVqgKWzL+sfQtale+QoXMdjy+erlV8VoHJTQOfLzZBGSmHvz4OrfOdfBBh4AdvHk5DrTsHZcZ0NKNfEQprsgNUxKVyzllQDSNM6yKVhcJZuYRCSs3o/+4DMSJXQchzVAyhZkvNt5VFuHyiZu4q3u4ManzIAmZOOp2j9alINIJtK3P1Wys/HkExYEQ2p9y4/EwzdCw5TNY+RR1x233/nSeoBlKBSxR53GxYzZjMqweid29EU7wG1lIS6vwn28pZqAMrGpkvhClCWFIjNuNgCgiE4aaiIW8VXtALF4FQRxTO0bnmLVAOQHO0ZfAHRxt7jtKk82+sOZhnm8sttWe42LbaLK6RUkM3rtdYvAKZXsqWM/DUbidYs94VfAH9eMn4DZlj8Q7FuwpsAAAAASUVORK5CYII=" InformativeScreenshot="4829037dff389f567ddf5e724c8f0719.jpg" Reference="P_nk8H1LrUKoOb7bK9UBIw/75E_0wlD-UK1qc3xSq9mcA" Selector="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" Title="Loket.nl" Url="https://app.loket.nl/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

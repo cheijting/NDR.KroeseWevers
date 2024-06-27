@@ -1,0 +1,13 @@
+﻿{
+  "Id": "0TLkAw7CwE2drAITaeWYoA",
+  "Reference": "P_nk8H1LrUKoOb7bK9UBIw/0TLkAw7CwE2drAITaeWYoA",
+  "ParentRef": "P_nk8H1LrUKoOb7bK9UBIw/gPf6tzczK06lBaHLd8FSDQ",
+  "Name": "In dienst",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2024-02-01T14:55:02.0170435Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2024-02-01T14:55:02.0170435Z"
+}

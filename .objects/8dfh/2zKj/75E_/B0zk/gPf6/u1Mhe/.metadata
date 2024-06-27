@@ -1,0 +1,13 @@
+﻿{
+  "Id": "u1Mher6G0kGQbxyWuKp8PA",
+  "Reference": "P_nk8H1LrUKoOb7bK9UBIw/u1Mher6G0kGQbxyWuKp8PA",
+  "ParentRef": "P_nk8H1LrUKoOb7bK9UBIw/gPf6tzczK06lBaHLd8FSDQ",
+  "Name": "Soort dienstverband",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Created": "2024-02-01T14:55:02.1079912Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2024-02-01T14:55:02.1079912Z"
+}

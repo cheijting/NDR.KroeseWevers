@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="p8xBN9pCA0i_Y9Ty4Cr0iQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-8, -8, 1936, 1056" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QQXCTgp6O/2bwAAAwBJREFUWEe91V1ozXEcx/Ezx9gDw2ZjJWolFnIykw2LYszTmhbNQ5ZhuRglhSuhJQ/b7CFrHmJJscnmauPYDEXbwpLc7MKFxxMulmWuNu/P6fcvIjn2/51vvTrn/Dq/7/f3//5/v//fo2ib6ZN45GAp5iAa4xALL5z/Bec4YcbmoxPnkKCxkEIToGI1eIYerMNRPEIDFmADtiEDWlgcRiART/Ad+fhtoX8NZwJ01VPgw1Qsx220Q4mr0I9erEIrbkGLzUMpchHaAv4UJokW48crHIaSn8dppEPFP6PcjOn7Fag7JtN/hhJA7Z2N3diBQnyEOpCNM6jAGhSgC7oVk2AyuRBKZujeX0AltFm1X4ZwBHtRi52IgZntUighluEtus13bdIyqANN0GJaEAUz06VQQkRCp6EERRiAWq6xYlRjH4L/txJOcqxEHS7jIL7gGpJhfQHa5XdwH2nQVfehGe7f/59DyaHnhY6jHljafNoHekDp+WHv6hVOAYyHNmIHBrELdos7YQrp/ZAKdUI7Pwn2F+AUQSb0AtIR1BPTfnGFKaTjqBfUJ2RpLGyhYhgJPRGL3td7IwONnuRAgycC9sMsIKJthm+aP2XeKIpuRRW8YVmAQoWMxfiAm4jUmPVQESMJ6/ECWWbMfphCCWjGWcxFeNqvIkYxBvEACxELu6ECRioKUIf96EYZRsNeKDmioQ0XgLqQji74YbcLSg6d9yZ8xSHUohI5CP7HSjjJsQcnzeciPMcAtqMQs+D+hlRCqP13MYQbyMYJlGIFdBxfQwtzN5QQMdB9r8cBHIcW8xh6IJXjEjIQnONamIS6/w/RjjysRQ2qsRq6+nfYAp2STUjB8N8RSoA46AT04xQq8AZXkWbGLiIXx9CLFkzG8EIJDCVX6/WpK2xDB5wO9EELyUcrGrEE6t506AmqF1gw3z+HMwF6833DPUyAkk2EuqONWILNUFFd/VOoG7plPeiEFjgGoYUmQO28jpdQ238J/TZ036MQj0SMRSbUuY3QogmP5wc+F6f1nNho7wAAAABJRU5ErkJggg==" Selector="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" Title="Loket.nl" Url="[in_LoginLoketURL]">
+      <imageRef attrName="InformativeScreenshot" originalValue="5ed800b2d569c167de591a07620dceec.jpg" xmlns="">0sQW7qsUHEEqF13exxXxn2A</imageRef>
+    </TargetApp>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData IsVariable="False" Name="in_LoginLoketURL" />
+    </scg:List>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

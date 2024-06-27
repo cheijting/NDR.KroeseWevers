@@ -1,0 +1,42 @@
+{
+  "DisplayName": "VerkrijgenStandaardfunctie",
+  "Tooltip": "We use the template from business to match the value of 'Functiecode' to the actual value used in Loket",
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_Functiecodes",
+      "DisplayName": "in_Functiecodes",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_Functiecode",
+      "DisplayName": "in_Functiecode",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_Standaardfunctie",
+      "DisplayName": "out_Standaardfunctie",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    }
+  ]
+}

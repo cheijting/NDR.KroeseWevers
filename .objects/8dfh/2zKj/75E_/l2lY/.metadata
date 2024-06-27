@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Persnr.",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "l2lYNC2kCkaQ7iX7J6SNIw",
+  "Reference": "P_nk8H1LrUKoOb7bK9UBIw/l2lYNC2kCkaQ7iX7J6SNIw",
+  "ParentRef": "P_nk8H1LrUKoOb7bK9UBIw/75E_0wlD-UK1qc3xSq9mcA",
+  "Created": "2024-01-26T09:45:44.9722509Z",
+  "Updated": "2024-01-26T09:49:46.4349539Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.4.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
