@@ -136,7 +136,9 @@
           </InArgument>
           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_Config" />
           <OutArgument x:TypeArguments="x:String" x:Key="out_EmploymentIDURL" />
-          <InArgument x:TypeArguments="x:String" x:Key="in_EmployerIdURL" />
+          <InArgument x:TypeArguments="x:String" x:Key="in_EmployerIdURL">
+            <Literal x:TypeArguments="x:String">0bc93f8a-649e-403a-90d2-f355a29d11ab</Literal>
+          </InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>

@@ -452,6 +452,6 @@
         <InArgument x:TypeArguments="x:String">[out_EersteDagPeriode.Year.toString+"-"+ If(in_Periode.Length = 1, "0"+in_Periode, in_Periode)+ ", " +out_EersteDagPeriode.ToString("dd MMM. yyyy",CultureInfo_Dutch) + " - " +out_LaatsteDagPeriode.ToString("dd MMM. yyyy",CultureInfo_Dutch)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1141,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Verkrijgen huidige periode - End&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1141,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Verkregen periode: &quot;+ out_PeriodeNotatie+&quot; - End&quot;]" />
   </Sequence>
 </Activity>

@@ -9,7 +9,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000110eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoiV2UgdXNlIHRoZSB0ZW1wbGF0ZSBmcm9tIGJ1c2luZXNzIHRvIG1hdGNoIHRoZSB2YWx1ZSBvZiAnTW9kZWxudW1tZXInIHRvIHRoZSBhY3R1YWwgdmFsdWUgdXNlZCBpbiBMb2tldCIsIjxWZXJzaW9uPmtfX0JhY2tpbmdGaWVsZCI6MX0=</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1234,1931</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,2011</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>VerkrijgenFunctie_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -96,35 +96,35 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="We use the template from business to match the value of 'Modelnummer' to the actual value used in Loket" DisplayName="VerkrijgenWerknemersprofiel" sap:VirtualizedContainerService.HintSize="744,1866" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="We use the template from business to match the value of 'Modelnummer' to the actual value used in Loket" DisplayName="VerkrijgenWerknemersprofiel" sap:VirtualizedContainerService.HintSize="744,1946" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="682,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Verkrijgen werknemersprofiel - Start&quot;]" />
-    <If Condition="[not String.IsNullOrEmpty(in_Modelnummer)]" DisplayName="If Modelnummer niet leeg" sap:VirtualizedContainerService.HintSize="682,970" sap2010:WorkflowViewState.IdRef="If_4">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="682,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Verkrijgen werknemerprofiel - Start&quot;]" />
+    <If Condition="[not String.IsNullOrEmpty(in_Modelnummer)]" DisplayName="If Modelnummer niet leeg" sap:VirtualizedContainerService.HintSize="682,1050" sap2010:WorkflowViewState.IdRef="If_4">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="648,788" sap2010:WorkflowViewState.IdRef="Sequence_9">
+        <Sequence sap:VirtualizedContainerService.HintSize="648,868" sap2010:WorkflowViewState.IdRef="Sequence_9">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_Modelnummers]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="606,700" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_Modelnummers]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="606,780" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="572,585" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="572,665" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[CurrentRow(&quot;Nummer dotweb&quot;).ToString.Equals(in_Modelnummer)]" DisplayName="If functiecode gematcht" sap:VirtualizedContainerService.HintSize="510,474" sap2010:WorkflowViewState.IdRef="If_3">
+                  <If Condition="[CurrentRow(&quot;Nummer dotweb&quot;).ToString.Equals(in_Modelnummer)]" DisplayName="If functiecode gematcht" sap:VirtualizedContainerService.HintSize="510,554" sap2010:WorkflowViewState.IdRef="If_3">
                     <If.Then>
                       <Sequence sap:VirtualizedContainerService.HintSize="476,292" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <sap:WorkflowViewStateService.ViewState>
@@ -161,7 +161,13 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_8" />
+                      <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
                     </If.Else>
                   </If>
                 </Sequence>
@@ -221,6 +227,6 @@
         <Sequence sap2010:WorkflowViewState.IdRef="Sequence_12" />
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="682,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Verkrijgen werknemersprofiel - End&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="682,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Verkregen werknemerprofiel: &quot;+ out_Werknemersprofiel+&quot; - End&quot;]" />
   </Sequence>
 </Activity>

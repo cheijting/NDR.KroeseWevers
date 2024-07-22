@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sandbox" VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap:VirtualizedContainerService.HintSize="1234,1168" sap2010:WorkflowViewState.IdRef="Sandbox_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sandbox" VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap:VirtualizedContainerService.HintSize="1234,3169" sap2010:WorkflowViewState.IdRef="Sandbox_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -30,6 +30,16 @@
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -87,9 +97,15 @@
       <AssemblyReference>System.Linq.Parallel</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sandbox" sap:VirtualizedContainerService.HintSize="592,1103" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sandbox" sap:VirtualizedContainerService.HintSize="1112,3104" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="Datatable" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="Dictionary" />
@@ -100,7 +116,153 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="530,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Navigatie" sap:VirtualizedContainerService.HintSize="1050,1961" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="4ce8d581-7d95-49d1-b41c-58e813b19aa1" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,1744" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="PersoneelsGegevens" />
+              <Variable x:TypeArguments="x:Int32" Name="RowIndex" />
+              <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="Zoekregels_Dictionary" />
+              <Variable x:TypeArguments="x:String" Name="KlikPersnr" />
+              <Variable x:TypeArguments="x:String" Name="CurrentURL" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into ''Persnr.''" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="4ce8d581-7d95-49d1-b41c-58e813b19aa1" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://app.loket.nl/employer/38a79cdd-7eaf-4466-9712-b84b90da8de5/employments?payrollAdministrationId=3ef37091-30d6-47f8-87f3-570a9047cb28" ContentHash="dMbx0R9O3EyxCiahSm7Zbg" DesignTimeRectangle="242, 339, 144, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="''Persnr.''" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' colName='Persnr.' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' colName='Persnr.' class='form-control ng-star-inserted' aaname='' /&gt;" Guid="35253c11-6681-43f9-b9e7-5b120a7b8f41" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJQAAAAsCAYAAACDpZHMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAMUSURBVHhe7ZzLTipBEIbP47JzdxbsXLF344YncGHCS5AQnkIucj/AkCMboJ1/unroywCDNqMJ/5dU4kxfMPZnVcfE+rNJNorBiBUUihE1TgqVrBM1n87VeDRWw/5Q9d/6jDsPeAAf4EWS+lHkTSAUJi7mi2zxerVW2+1W7fd7RQg8gA/wYtAbqMVs4biDcIRKkkSNhiM1m8woETnLbrdT08k08wXeFAoF4yATIWWBL3amyoVKVklW5piZyDXAF5Q/k6VyoXDRWv5byjRCygNv4I8j1Ph9rD7+f8gUQsoDbyajiSsU0hYuWoRcC7zBdckRCn9nIOSrwB8KRaJBoUhUKBSJCoUiUaFQJCq3F6r9rP7WHgqj2ZY536X3qhq1R9XqyTP5MX4kQw1fHlOhIgpAoX4N1QuVHf6DarwM5EUEKNSvoWKhBqpVT8td/VUN5Y1BZy1TDovk6KhmPu4JGQgln1N7Vl15Y0Q26+1y233S+znfw1NHRsk1VCuU3Kf8u5M+SOvws3m2IFqm4zotTC6VJxQEcYQIhHP3y+anz+5+Ee94d0SFQkmGCX7zfVk0thSZcP46SGcynS2M/V4wGcjG3jMQ0BeWlKYyoXQWsLKQIcgemuzARQyTQYLwhWrrzOKKYMpfQVCo6FQj1LkSEpQ3zbEMljhc2R+SNOpYd7q8FUGh4lGBUJIhCi7impIl7+T6FBHKCOALEgrjQqHicXOhdKYJM5DNMRsJJy7lzqH3Oqprxv2y6WdET7iMdrpevrwslP/5l57vlxsLJdkJP+yCsA9YS2XGigSUQ7PmNNuy3hcqxeznS5WvT0tjS8YuCmXWOne2M893zM0zFLkvKBSJCoUiUaFQJCoUikSFQpGoUCgSlUAo9jUgXwXeBP/oOR1Ps94/hFwLvIE/jlBoyZKsE5lCSHngjWnpkwuFQPOow+Eg0wi5zGF/yLwxDjlCmbYshJQFDcdWy1WxUAi2RCRlgB/wxM5OiEAoUw/ZtJX47HfHpq3wA8194YvtTyCUCUxkW2mGHfDg6rbSDMZ3gkIxIsZGfQLTFFmYbBaNhQAAAABJRU5ErkJggg==" InformativeScreenshot="34ae8c59f686b5068319a51fcdc80cfc.png" IsResponsive="True" Reference="P_nk8H1LrUKoOb7bK9UBIw/l2lYNC2kCkaQ7iX7J6SNIw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="250, 292, 48, 18" ElementType="Text" FriendlyName="''Persnr.''" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='employeeEmployeeNumber' tableRow='1' aaname='Persnr.' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='employeeEmployeeNumber' tag='SPAN' aaname='Persnr.' type='' class='ellipsis column-header-text ng-star-inserted' check:text='Persnr.' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAAWCAYAAACPHL/WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAE6SURBVFhH7ZSxDoJADIZ9fxcX4+LgwODA6GDiCxDCGxh4CHmACnftXVuKgonxJAxfotxfrt9R2LSPFpbEKpQ6q1DqSKH7FU7bHew1WSmKUmaaUM+fSNlCovkScid1hNudZRNlglALVaaFSBLh+eKM2RpuB79+utQva5rLsbt2hkpl8oL2szN8nXgvFMawvxn/r6AaJyTX8iLKCbDGN2us055mxp6Y2e/Q8GnRNdw8CPEMCh2u0GBNU5Txd2iWBOgA4j2GGZtJQn5k+szISTukUKxBxJOTTVGzfIT0wVkZi0nvUISEXpzSmBDiG/VQcz8UYg2JTA0NjdeIUJXxEcQXG0fwUyGd6ZktFDKKIGAJiXEb1nwmZH/t5gs51Ce4O+mq+0y7tdGRUzVsj+89oQWwCqXOKpQ6CxNq4Ql/YEZBJcAf6AAAAABJRU5ErkJggg==" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </uix:NTypeInto.Text>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into ''Persnr.''" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="4ce8d581-7d95-49d1-b41c-58e813b19aa1" Text="3335" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://app.loket.nl/employer/38a79cdd-7eaf-4466-9712-b84b90da8de5/employments?payrollAdministrationId=3ef37091-30d6-47f8-87f3-570a9047cb28" ContentHash="dMbx0R9O3EyxCiahSm7Zbg" DesignTimeRectangle="242, 339, 144, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="''Persnr.''" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' colName='Persnr.' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' colName='Persnr.' class='form-control ng-star-inserted' aaname='' /&gt;" Guid="35253c11-6681-43f9-b9e7-5b120a7b8f41" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJQAAAAsCAYAAACDpZHMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAMUSURBVHhe7ZzLTipBEIbP47JzdxbsXLF344YncGHCS5AQnkIucj/AkCMboJ1/unroywCDNqMJ/5dU4kxfMPZnVcfE+rNJNorBiBUUihE1TgqVrBM1n87VeDRWw/5Q9d/6jDsPeAAf4EWS+lHkTSAUJi7mi2zxerVW2+1W7fd7RQg8gA/wYtAbqMVs4biDcIRKkkSNhiM1m8woETnLbrdT08k08wXeFAoF4yATIWWBL3amyoVKVklW5piZyDXAF5Q/k6VyoXDRWv5byjRCygNv4I8j1Ph9rD7+f8gUQsoDbyajiSsU0hYuWoRcC7zBdckRCn9nIOSrwB8KRaJBoUhUKBSJCoUiUaFQJCq3F6r9rP7WHgqj2ZY536X3qhq1R9XqyTP5MX4kQw1fHlOhIgpAoX4N1QuVHf6DarwM5EUEKNSvoWKhBqpVT8td/VUN5Y1BZy1TDovk6KhmPu4JGQgln1N7Vl15Y0Q26+1y233S+znfw1NHRsk1VCuU3Kf8u5M+SOvws3m2IFqm4zotTC6VJxQEcYQIhHP3y+anz+5+Ee94d0SFQkmGCX7zfVk0thSZcP46SGcynS2M/V4wGcjG3jMQ0BeWlKYyoXQWsLKQIcgemuzARQyTQYLwhWrrzOKKYMpfQVCo6FQj1LkSEpQ3zbEMljhc2R+SNOpYd7q8FUGh4lGBUJIhCi7impIl7+T6FBHKCOALEgrjQqHicXOhdKYJM5DNMRsJJy7lzqH3Oqprxv2y6WdET7iMdrpevrwslP/5l57vlxsLJdkJP+yCsA9YS2XGigSUQ7PmNNuy3hcqxeznS5WvT0tjS8YuCmXWOne2M893zM0zFLkvKBSJCoUiUaFQJCoUikSFQpGoUCgSlUAo9jUgXwXeBP/oOR1Ps94/hFwLvIE/jlBoyZKsE5lCSHngjWnpkwuFQPOow+Eg0wi5zGF/yLwxDjlCmbYshJQFDcdWy1WxUAi2RCRlgB/wxM5OiEAoUw/ZtJX47HfHpq3wA8194YvtTyCUCUxkW2mGHfDg6rbSDMZ3gkIxIsZGfQLTFFmYbBaNhQAAAABJRU5ErkJggg==" InformativeScreenshot="34ae8c59f686b5068319a51fcdc80cfc.png" IsResponsive="True" Reference="P_nk8H1LrUKoOb7bK9UBIw/l2lYNC2kCkaQ7iX7J6SNIw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="250, 292, 48, 18" ElementType="Text" FriendlyName="''Persnr.''" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='employeeEmployeeNumber' tableRow='1' aaname='Persnr.' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='employeeEmployeeNumber' tag='SPAN' aaname='Persnr.' type='' class='ellipsis column-header-text ng-star-inserted' check:text='Persnr.' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAAWCAYAAACPHL/WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAE6SURBVFhH7ZSxDoJADIZ9fxcX4+LgwODA6GDiCxDCGxh4CHmACnftXVuKgonxJAxfotxfrt9R2LSPFpbEKpQ6q1DqSKH7FU7bHew1WSmKUmaaUM+fSNlCovkScid1hNudZRNlglALVaaFSBLh+eKM2RpuB79+utQva5rLsbt2hkpl8oL2szN8nXgvFMawvxn/r6AaJyTX8iLKCbDGN2us055mxp6Y2e/Q8GnRNdw8CPEMCh2u0GBNU5Txd2iWBOgA4j2GGZtJQn5k+szISTukUKxBxJOTTVGzfIT0wVkZi0nvUISEXpzSmBDiG/VQcz8UYg2JTA0NjdeIUJXxEcQXG0fwUyGd6ZktFDKKIGAJiXEb1nwmZH/t5gs51Ce4O+mq+0y7tdGRUzVsj+89oQWwCqXOKpQ6CxNq4Ql/YEZBJcAf6AAAAABJRU5ErkJggg==" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NCheckState DisplayName="Check App State 'Geen gegevens'" sap:VirtualizedContainerService.HintSize="954,525" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="4ce8d581-7d95-49d1-b41c-58e813b19aa1" Timeout="5" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,308" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="388,193" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4ce8d581-7d95-49d1-b41c-58e813b19aa1" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://app.loket.nl/employer/38a79cdd-7eaf-4466-9712-b84b90da8de5/employments?payrollAdministrationId=3ef37091-30d6-47f8-87f3-570a9047cb28" DesignTimeRectangle="1833, 153, 18, 18" DesignTimeScaleFactor="1" FriendlyName="'EM'" FullSelectorArgument="&lt;webctrl parentid='employ-wizard-close' tag='EM' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='employ-wizard-close' tag='EM' type='' class='icon icon-cancel' aaname='' /&gt;" Guid="ffa3a69b-281b-4adc-8351-95122e2b7d5b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADcSURBVEhL7dM/DoIwFAZwT+HkZVycGTiFKw4mDoaQcAfjERjcjIvxFBxAGVzLyvJBzcNA33vFP9GJL3kJoe0vTV87wY8yws/8Ey5xTmPMFzGSS0n/3AzP4fAtQzBbYvqoCKuTu7DEcR3ReFNhhiuNdCPsuMAubGEXd9Cmgn1BY/3IZ2xyJAy/czTNYWiJG715DO+XD7XRYRsFH0Jt/LBwpnJDeTywhL6OK7DQ/e0BG/W28AiwgLZnKt4WGedw74EIjXLxTx6I2v0O/t4DQQVjKvrW4p+jwN9nhClADe8IydF0uaqSAAAAAElFTkSuQmCC" InformativeScreenshot="c547698be5fa2c901f7864f5a5698b9e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="Element 'Zoek Dienstverband'" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Target>
+                          <uix:TargetAnchorable BrowserURL="https://app.loket.nl/employer/38a79cdd-7eaf-4466-9712-b84b90da8de5/start?payrollAdministrationId=3ef37091-30d6-47f8-87f3-570a9047cb28" ContentHash="FnhVqoX8ZkeHnrVUuJqBXw" DesignTimeRectangle="272, 835, 20, 20" DesignTimeScaleFactor="1" FriendlyName="'Zoek Dienstverband'" FullSelectorArgument="&lt;webctrl parentid='nav-primary-search-employment' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='nav-primary-search-employment' tag='EM' type='' class='icon icon-list ng-star-inserted' aaname='' /&gt;" Guid="3bf4be5b-1e0a-40ab-8a21-bfbf6b948ea1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAGRSURBVEhL7ZSxasJgFIX7FJ06ZnJ1kS7SpWQRHHwCBweHLgYiWJBScHCTLA0iiINLoHQSHSRQgg5WCGiXBgrqIIJDHCTgcprmvyYxQ5MlmfrBGXJu7j38uUmuEDP/AaFQwBFaQwR3UwaX60Azmetg6njOlXFt16KKb+g4j6CAKQTfDcKQuQ5D6aI5miQMqJ0CDhhUK6yYtYsXJ7DDs8EBf+u2Og2e4JcTzN0epkWXfqwjdnYtmo7wj0hqyfHhBVhbaG/v0IwTGR6WoePVrkWTji/fM6KAPbpFWlLqCbLBXAdDQT51ucQwccURVtROATMIviGCylwHVXK+D/+AUKUkjKndfUSLXhN8tgK+PMKCPMYG3bKIdMRTcBkRpd6GehNdckwkF2DOFZQKjyi1P93PnHHAR7uJ/L2IuygqNCHPD9TrBuioZc6LekBtwlyHSQfpwCJDlbH/yNROAd9oub9kEa0lcx2WffDBAWHK9d030dvBega53oGsbsnwWKkKatUXCFFUVzBeU6NNckuOi5gDgB+LepB/8DErdQAAAABJRU5ErkJggg==" InformativeScreenshot="36019fce76b01fb535e0f72d0d9449d4.png" Reference="P_nk8H1LrUKoOb7bK9UBIw/EQCExOmRh0OKksedTa-7sg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="28, 844, 244, 1" ElementType="Text" FriendlyName="'Zoek Dienstverband'" FullSelectorArgument="&lt;webctrl aaname='Dienstverband' class='title' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Dienstverband' class='title' tag='SPAN' type='' check:innerText='DIENSTVERBAND' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPgAAAAFCAYAAABo3SHMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAGiSURBVFhH7VexTgMxDOUrmPgCfoKV72DsCku3Lgxl6dL5DnE/gHRSPwCxXW/iE9qKhZ3R9OL4znHsKJXYck+y2rixEz/5JekVMPTVCp6XG9idvMOhg2Y5+GvovSead2phO8ypOu+IgTE1NP7TynVsN+fxCrbtAR0J0Nxm7x0EbT/7OswrxwpUPmRubS3ysToHuHzrFo7EqeArlyOL70u4m1EGMgR+gN069JsNJ4w3GjVvL5ozXpMOFLRIvAymwMc9J0TiBS6N59L4iERk1D5YuC+si+JGPtwIkc2RIfCxJumfUR5+v+Hz/SNH4LHfbDhhscAxxvo+gQQ6mXYr2QKXeX0+d3t6ZAtcMyZMU+CheGm9Mb8cn5HNkSVwyz+jMPzA68MCrm8W/3yDJxoriGHzUaRyzQkYhyaFnBI4CcgdDH694JDgvxsI69Sf1VbtkiNeBzfrEExyZPFNh5b0zygMHTzd5gqcmin13LUajkHGUNM2VVrgDkbjJgXOBanclpcLfNqzyo8hNswf/u0IjL0qsjky1sT4dE0zysDX2wvc3z3CH6VyxA4NzeGhAAAAAElFTkSuQmCC" SearchSteps="Selector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:VerifyExecutionOptions.Target>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://app.loket.nl/employer/38a79cdd-7eaf-4466-9712-b84b90da8de5/employments?payrollAdministrationId=3ef37091-30d6-47f8-87f3-570a9047cb28" DesignTimeRectangle="74, 388, 1772, 56" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Er zijn'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='*Er zijn geen gegevens aanwezig.*' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='*Er zijn geen gegevens aanwezig.*' tag='TD' type='' class='emptymessage-cell' check:text='Er zijn geen gegevens aanwezig.' /&gt;" Guid="b404a272-5c7a-4065-8357-645d4a680d7d" ImageBase64="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" InformativeScreenshot="f33e624deef0752682c2497862e9594b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <Assign DisplayName="Assign dictionary zoekregels" sap:VirtualizedContainerService.HintSize="954,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[Zoekregels_Dictionary]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[New Dictionary(of String, String)]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Persnr verl'" sap:VirtualizedContainerService.HintSize="954,193" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4ce8d581-7d95-49d1-b41c-58e813b19aa1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://app.loket.nl/employer/38a79cdd-7eaf-4466-9712-b84b90da8de5/employments?payrollAdministrationId=3ef37091-30d6-47f8-87f3-570a9047cb28" DesignTimeRectangle="1685, 388, 161, 56" DesignTimeScaleFactor="1" FriendlyName="'273'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='DIV' colName='Persnr. verl.' innertext='*{0}*' /&gt;&quot;, KlikPersnr)]" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='DIV' colName='Persnr. verl.' innertext=' 273 ' type='' class='inner' aaname='' check:text='273' /&gt;" Guid="5d5ac4cb-4998-456c-922a-ee9273823f2d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKUAAAA8CAYAAAAHQnpRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAGmSURBVHhe7di9jcIwHEBxtryS7lo6GIEqM1DAGChCiBGQYI7LAD4SSC58mUiXiCf8il+BEqd6sv1nVPwUQSIZ7fJtkAiaKNuFSgRGKRyjFI5RCscohWOUwjFK4RilcIxSOEYpHKMUjlEKxyiFY5TCMUrhGKVwjFI4RikcoxSOUQrHKIVjlMIxSuH0GmU+H4fvr1oW8ubZISwn7Wctk1U4Plw/Dtn679tKR29RZmVI803z+7iYnsJqh3lrU62pw6uCbK0v1tlp/TQs9/X7SsVwx/d+FWaRqO4ivHMdrdLxnihfBFuqom0d7UrHYFHGonq+S553x/I+OVscHjxXCoaJMnof7HYsn++k3ilT1H+UVZCRna46umMDUO0ysUfvnfpE/UZ5CTIWUrUDdrwrvh6G9In6i7JDkKXHUZ6P9Kvd9fI9p+/09Bbl0z/HbyLtMuTUDDJNwww60j8YpXCMUjhGKRyjFI5RCscohWOUwjFK4RilcIxSOEYpHKMUjlEKxyiFY5TCMUrhGKVwjFI4RikcoxSOUQrHKIUz2uXbIBE0UbYLld6vCL8SC1M4pQEQRgAAAABJRU5ErkJggg==" InformativeScreenshot="2055eb8b17a79b3d363714dfcdef1472.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Label 'Dienstverband'" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/9ea3c452-0ec9-4e89-a1d7-54640c636acb/employment/0b527798-5603-4f17-84d6-1f6e4390912d/details?payrollAdministrationId=ae05b2c6-ee63-4829-bde7-ea5dbe9ecf19" DesignTimeRectangle="80, 528, 101, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Dienstverband'" FullSelectorArgument="&lt;webctrl aaname='Dienstverband' parentid='details' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Dienstverband' parentid='details' tag='SPAN' type='' class='p-menuitem-text ng-star-inserted' check:innerText='Dienstverband' /&gt;" Guid="04504ec5-abb2-4a3a-b2df-169ca273506c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGkAAAAUCAYAAACOPhMlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJoSURBVGhD7ZU7bsMwDIZ7ik49VIaconMGD7lFpiBDD9C5hm/gOzhjDqJSEimRFGWnLpDGhX6AQCLJfH2U/eKanl4N0gbUIG1ADdIGJCD13bt7fVPWjbhLGt0h7B3d+YpL/0nDKdS9u9xw4XGaLscQ+zDgAmoZUrCT6/GMczd33vu1x0GKyT8o3jYg8WbQrQErbtTj1CAxlZC8CBTdJrpJ/HaBrp9uR0BVkTG4P8+gg8lk5F4cCorFDfL7iI3UgzM7ZPp8gOHP5hgh5wRpFLELaHjO3Dd8mz5Ez47u0K2GpF9vBiSVMBklRRNSmgavrPsy1nnxfFAQCIFQQ5OM9o2cQ3MqtXij5tmfBda3qg92ppYf2ApIel03yGoYru0/3QT/MiT9jPKJ572mYUy/rbyKVwM2RjZSPhPXMIfUSFVvWs/1pPzTTYRbxm4F7aebYviOsQ3QySf1ZBWkSkNTEeqVwk1B4sGLWGL6OPBKXjSJWGQ8o4fAMgmp9hoT6xSLDZEVQ0PiPmQPdE+jrD55LUNK11I3QEESBUjdBQkV16PRefss5hHi4u9iKiVsoV9Aqt2cP4LEbkm1AfRfF3ZL0O6B1MNHs4iLTakBjX5hfYhNLP2Dpby9ICfysQCJA5a+sN40lEb9i5Cyz3wm9/oOSJbxidSQQKkwaRRsEVLleSqAno/GYImPr7o1Yi/bXCODKrnkuPXX+5zvogfVOGsgiUn0MiB56abAcxPcJq9FSEGqeBFX7pV+9HmS8gnT32NO85B8XvxZnieoGI549keQvAQo8IN+ZyE1PacapA2oQdqAGqQNqEF6ejn3DfTBsr7rslsHAAAAAElFTkSuQmCC" InformativeScreenshot="396942386cd99de00c7d85ff90b45ff7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Dienstverband" sap:VirtualizedContainerService.HintSize="954,193" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4ce8d581-7d95-49d1-b41c-58e813b19aa1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/e5b92fe6-7f90-466a-a7ef-bf4ccda590c8/employment/e98fd18a-6574-404a-98a4-ecbbebf92fef/start?payrollAdministrationId=e193fe33-8b30-4f2f-99d1-ef49bf275c27" DesignTimeRectangle="80, 528, 97, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Dienstverband'" FullSelectorArgument="&lt;webctrl aaname='Dienstverband' parentid='details' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Dienstverband' parentid='details' tag='SPAN' type='' class='p-menuitem-text ng-star-inserted' check:innerText='Dienstverband' /&gt;" Guid="c0d6dd3a-7803-4de9-9c5f-2c575560909c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAUCAYAAACUAvOrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI6SURBVGhD7ZZLbgIxDIZ7iq44FAtOwZoFC27BCnEE9iOkHoA7wJKDuLFjz9h5TGamiKZVfimq8nD8x18m5QOaqlODUqEalAq1AMoTTpstrM9P7je9WgbK/XyAz9XWtKj4jwuscW5/44F/ouvRnfcIHXffpkTeGMrmAnfuA9xghwDM2HtFnt5xAf4OFJQH81vPVYOShALQ7fXXkv6fQmv4ybN7+PW7q11j4/0aGx+M8fgXeoyKx2sVvKwfen5dvDzDqwOcHm5cikN/JTbI08dwm31OFL8+3HZn9sOzqElQLE2fXCcjE6ogdp+huGiYRPtxMZzCvNiX/cO95VD9Xigq1rDfqB8pbHhOgRGBlXNjXl288AUpnzP16tgcXj+HIjfP91iYXMzEEMPCxoUflJorF33ETwCwlzmjyPoMZX2Uz5msbyLvJCg0noMiNyxq06FIH+PsugywxCWxt1P7kLYcivEkX5q0vl4LL99SKLRZJnkuZtAUKKIBzuhBNIjgyyj6Wfyl+Jz5Z7d0To5/DRS/8ZAsSJ47ZK+S2VgaRBoKe3Xj8rdXyc8cKHptYn4elPBys+ZD8ZvasTg5JTMbP92vmAxEUmhWF8muT18UJyrYEXYudwh31M8oFO3T++iB07yK4/VzoPjciRxFKJhINZsElUouhVBxeItppmT2Bh39LFTx5svgi0HNFjp1IFHWzxgUV+BO1yC4DGZP9Mgxk6GgBCY19IFrRqA01aEGpUI1KBWqQalQDUp1AvgGY9WwjdAgwUcAAAAASUVORK5CYII=" InformativeScreenshot="2c5b12f49bb64dfeba9572418a7a63e1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Label 'Uit dienst'" Mode="Appears" Retry="True">
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/e5b92fe6-7f90-466a-a7ef-bf4ccda590c8/employment/e98fd18a-6574-404a-98a4-ecbbebf92fef/details?payrollAdministrationId=e193fe33-8b30-4f2f-99d1-ef49bf275c27" DesignTimeRectangle="341, 549, 99, 31" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Uit dienst'" FullSelectorArgument="&lt;webctrl aaname='Uit dienst' parentid='employment-module-scroll-pane' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Uit dienst' parentid='employment-module-scroll-pane' tag='SPAN' type='' class='ng-star-inserted' check:innerText='Uit dienst' /&gt;" Guid="51c6a6bb-feae-425c-a9ed-610efc2aeb5a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGcAAAAjCAYAAACJiBSDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASjSURBVGhD7Zi/ayJbFMff/5BqS6uQJqQRG8FG0gRSCIEIBiQICSgsTJHAki0GZCuLfSwYcItgIzbBbcQiS7DQKhaSkEaLIKSIabQIDKm+787MuXOvM84kGn0ZYb5wQM/M/fmZe+659x8E8q0COD5WAMfHCuD4WAEcHyuA42MFcHysAI6PtXg42ghjjX5/lrQXPH12HxaghcIZ1FREvuxj7cshlMYLeZejXklh7eht7bO2yKmr8xvb66Z/t/RAztWUDU4bCg147aRNPrsecJ6gdxIV9Mirq35Cfs/yi5EbHNlv79+qaaFwxtdF7G4y/2YOanty5TyVz2jSCqiT7yNyXTl3dWTizL9+hEzV3yun9f1g6jxyLRSOl8RkLhnOCsmKNJ8NR4S8AI6pt+dxoXCmTdhA8jntPaBGaJUL2IuaISAUziFT6qJXVa16JuA0CpZ/ekIwWd/a+gG200Vc9l/pOZcY59b3LvtvK7d5iL2TJgbmyxPS+k2o6Rwieojn736toE5t/JX3ZruxOeVaOhzZ57S34LC2kjQZNgtRRqbbu+GM76HyvjvMnmFK40yqyOr7mKPMPiIGOEl3FexKfZu0I/y8syVOdvs/4ZiSyswQ1m7yR1Z9keMr9Iyzywt6tYKVLjvacoXzgstjKrOeg1J7gFGd9ojK8aHpjxbRMt7VJfeZ2eYpfrafjTLasAklyp+puBybJSbbOMMFrRRteI/KiYLURH+kubbNI5d/4YybyHAAO79xQ26u21+56W25wbkrY5v8qfIzOUlSW6Iuuc+K8cXLEh/OEdQOOeUyO2Xckne6VhnOdQEhqiuWvyenkGtbLnAETPlL5xL92/7Fy3j32a39Vp5WIbNYsohKx1xtTq0wHLmuTM152zArHM84L5s17vngGOVs+2QorCBb7uKJ3jD1ETjpuq0yri6+hekdG8BlwclO1GVqWXDEKp0Xjq5X9BoVZBMH1urXLbTD9jRr1c4M51F0KCxvjpKGdaSoUnu4WSQcNH5YdYlQIzQrHBHW2EY9JKenPgJHSBt2cZ4WoU70aWY4+iD4RneAb9fklDQon4rntsi3UDh9lpJSXWvJP47zhJzJvQcO2kW6lGX+KbCdmhPOeDQl4jSRpXdFtJkDDsZXIkuKnuGc0kd7ChuaUqHX12TdIzGomeqjmZJqXjfXz7hIUz+Y7eZZzDYKPaNVOrMm2tGWGxw5zWVnmhQ7yA74Tq3XyQ6YSlXO4uaBY7YRiqvSvL3iic0b72+qPDK8+qFWjE+B2jb9miYOw044TGM2wJh0jnBYlHXWkfG8sdT1leCo84f3Kur/wR4/ZdssllQQo9/vg8PkeQhlFi7gLwc2BxytUzYvfnl9NtM/aDm9HrOMVP7IDGMpONdUOLq0fhvnX08R45s/s634KbKlNh0GnfKEwzTuVJDZEZvkVlw/qNFDN7GYfcH6wa9CNlgZtfYITV/h09rygmNohNtqEanEITbovY1oDqn8FW6G8hXOnGGNHWrrpQL24mKcG1H3eRs0/hVXQiyqRBJFeuIBJ9DnK4DjYwVwfKwAjo8VwPGxAjg+VgDHxwrg+FgBHN8K+A/0MqGPX29eVgAAAABJRU5ErkJggg==" InformativeScreenshot="6718d1ded4258273c0e88ce9a32b523f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAOKSURBVFhH3ZZbSFRRFIZ9EXooSQrCSnzyJcmgDLKHwhC6gkbQQ0lIkS+iiQmmVgQlFgQZFVL0EJQIoURpipiSmualybzlZWa0TMfU8ZbOjDNnzvydtUaHQbfjmUMU9PAz5+yz917fWuvfmwlwyjL+pf4PAEv/N1hGTMJva8kDMFrfDH1ePsYKnmG8qgaOqSnMdXZjzqDnZ+9Fy9WVnI5PIeH4WfBA+N2XPACURXdGJjpPnGaZy96gK/ECdBG7+H26phb9F5NhTDyPieIShjOXVcI+Oob5qvdo3bEbbTFH+N07wFoStkCan4ZktXCgdmXj9n2xDEQAX8IiYUzNwMi9AjQGhXBgAtFfzma4+abmFfv5khDABvAv9dWYloGumDiYHhdiKDMLLVF7eWz2dSUH7DubwC3riU9AQ+AGDN7OX7GfL6k2oXXGCmPuHaUa0VwBAmrcFsHVGX9XgR/XbnCFqFKi9atJNQCp7+YtNAWHYijlCren58w5Lv34q7dsQmoJjYvWria/AMgXFIyCUOCG9Zs4c/LA8KV0DCSlYa6jV7h2NfkFsKSFsVEYUlLxPSkZw8+L0Bl5AB8CN2Lw0X3hfF/SBEBVIMPRMZ2tq4chO5OPID2L5vuSJgBqBR1DU3YOPodH4cvBY3xhieauJU0AS8eUvNAQvJWPo8OysGKeGmkCIBlyrnpuSOuUWThHjTQBzLW08wnoPhon/O6PNAP0JqTw5eQyV0Oe9N98S9LcApJrohxScRCc3bnC72qkGcDl+AV77SEGoCqI5qiRJgAquVx/nDOXTNrLT9IEYK0/DMeTAEitSZBmvgrnqJVqgKWzL+sfQtale+QoXMdjy+erlV8VoHJTQOfLzZBGSmHvz4OrfOdfBBh4AdvHk5DrTsHZcZ0NKNfEQprsgNUxKVyzllQDSNM6yKVhcJZuYRCSs3o/+4DMSJXQchzVAyhZkvNt5VFuHyiZu4q3u4ManzIAmZOOp2j9alINIJtK3P1Wys/HkExYEQ2p9y4/EwzdCw5TNY+RR1x233/nSeoBlKBSxR53GxYzZjMqweid29EU7wG1lIS6vwn28pZqAMrGpkvhClCWFIjNuNgCgiE4aaiIW8VXtALF4FQRxTO0bnmLVAOQHO0ZfAHRxt7jtKk82+sOZhnm8sttWe42LbaLK6RUkM3rtdYvAKZXsqWM/DUbidYs94VfAH9eMn4DZlj8Q7FuwpsAAAAASUVORK5CYII=" InformativeScreenshot="4829037dff389f567ddf5e724c8f0719.jpg" Selector="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" Title="Loket.nl" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <Assign sap:VirtualizedContainerService.HintSize="1050,82" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[Dictionary]</OutArgument>
       </Assign.To>
@@ -108,7 +270,7 @@
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[new Dictionary(of string, string)]</InArgument>
       </Assign.Value>
     </Assign>
-    <If Condition="[Dictionary.Keys.Contains(&quot;Test&quot;) andalso Dictionary(&quot;Test&quot;).ToString.Contains(&quot;Test&quot;)]" sap:VirtualizedContainerService.HintSize="530,262" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[Dictionary.Keys.Contains(&quot;Test&quot;) andalso Dictionary(&quot;Test&quot;).ToString.Contains(&quot;Test&quot;)]" sap:VirtualizedContainerService.HintSize="1050,262" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
@@ -122,14 +284,14 @@
         <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4" />
       </If.Else>
     </If>
-    <ui:ReadRange AddHeaders="True" DataTable="[Datatable]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="530,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="C:\Users\ChristelHeijting\OneDrive - AB&amp;C Groep\Documenten\04-01 Report.xlsx">
+    <ui:ReadRange AddHeaders="True" DataTable="[Datatable]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="1050,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="C:\Users\ChristelHeijting\OneDrive - AB&amp;C Groep\Documenten\04-01 Report.xlsx">
       <ui:ReadRange.Range>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" Value="" />
         </InArgument>
       </ui:ReadRange.Range>
     </ui:ReadRange>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Datatable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,440" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Datatable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1050,440" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
