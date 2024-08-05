@@ -1,17 +1,12 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="NavigerenOpslaan" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Error or warning message thrown in Loket (if thrown)." Name="out_ErrorWarning" Type="OutArgument(x:String)" />
-    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:String))">
-      <x:Property.Attributes>
-        <RequiredArgumentAttribute />
-      </x:Property.Attributes>
-    </x:Property>
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF0000015CeyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoiVGhpcyBmaWxlIHByZXNzZXMgYW55IHNhdmUgYnV0dG9uIGFuZCBjaGVja3MgZm9yIGVycm9ycyBvciB3YXJuaW5nLiBXaGVuIGFuIGVycm9yIG9jY3VycywgaXQgc3RvcHMgdGhlIGN1cnJlbnQgbXV0YXRpb24gYW5kIHNlbmRzIHRoZSBtZXNzYWdlIGluIGFuIG91dCBhcmd1bWVudC4iLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1668,4985</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1714,5103</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NavigerenOpslaan_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -104,25 +99,25 @@
       <AssemblyReference>System.Collections</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This file presses any save button and checks for errors or warning. When an error occurs, it stops the current mutation and sends the message in an out argument." DisplayName="NavigerenOpslaan" sap:VirtualizedContainerService.HintSize="1678,4920" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This file presses any save button and checks for errors or warning. When an error occurs, it stops the current mutation and sends the message in an out argument." DisplayName="NavigerenOpslaan" sap:VirtualizedContainerService.HintSize="1724,5038" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Loket.nl" sap:VirtualizedContainerService.HintSize="1616,4809" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Loket.nl" sap:VirtualizedContainerService.HintSize="1662,4927" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1582,4592" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1628,4710" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click Opslaan" sap:VirtualizedContainerService.HintSize="1520,193" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="3" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click Opslaan" sap:VirtualizedContainerService.HintSize="1566,193" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="3" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://app.loket.nl/employer/805b1510-4231-413f-801f-45bf4d3987e1/employment/3a64ceaf-22e5-4d93-bcb8-5d1bd34a4e7a/details?payrollAdministrationId=34e4f237-3a13-4f12-a671-4a945c410840" DesignTimeRectangle="1047, 223, 40, 40" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'BUTTON details-start-da…'" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Opslaan' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' aaname='Opslaan' type='submit' class='btn btn-primary btn-circle ng-star-inserted' /&gt;" Guid="77f0804f-e7ae-4dd1-b5e3-6e4436d6a1e8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJ0SURBVFhH7Zm/axNhGMf9K1TwB4qgSBzM6GJVUDMYFBEXd4dKwPrrBhcVkqGgUuxgCYV2sB0KdSvpUFwyGYWA10FKI5JBzqkZwsER+ZonfZ/Le9cnsc3lcle5D3yne973/dzxvi/H+x7APuP/Ea58reHxsw/I3n6NM+ee4uDR8VBDY9BYT4yFzti92CFs2w5e5j/i8PEHYsejCI39qu3gOC1l1cUjbK7XceHiC7GTKHLpar7jpOMRpreSGkYZctJxhT9XNnHoWHTToFfISf/KrjBNdqlBHEJujCucuTEpFschN++8UZaa8Kmzj8TiOCR13lCWmrBUGKcwiXBYYRLhsMIkwj2TXUXZamLL+o6prPD8H2FGI5yex4qlBmpjlWbluj5hRiA8iRnTUaMQDr4UDKGuf5iQhQ3kSg01wjZWaR4psbZ/mFCFM8U6bNU/YZtryAh1uwkTmnBqogpt2rY/bRW5tFy7mzCDC7cX0qLZgGVW8Ny/6tNLKG+pjgm7jpkBdgY9zMDC9z1zs4ny9Fs1N/2LrIGVib0vMn+YgYVThZpnfhL2RgVzn/QXcfCtOJz/bCbAHDZwq1DFT7+1xqA7ghQm+KIbm8Wc2VS9dAmyI0hhggt3Ql97vbsrBNwRpDBDElYZW8Dyxi8sjwvPAoYZrnCIYRLhsMIkwmGFcYXpsEIqjEPEg5S7996JxXEIuTGucByPWjn6kasrvFmzcORkTmwQZU6cfojaj9/KUhMmpqZXxUZR5n1xTdlt4xFutf7gyvWC2DCKXL6W7zjpeIQJupShORP1pQxdDJGLnx3CDF090cn3qK+96KptT9decWefCQN/AeIjZ+gGW2HpAAAAAElFTkSuQmCC" InformativeScreenshot="86c28dd7932394f40dc13f724fc74ac7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
@@ -137,7 +132,7 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State Warning" sap:VirtualizedContainerService.HintSize="1520,672" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="2" Version="V3">
+            <uix:NCheckState DisplayName="Check App State Warning" sap:VirtualizedContainerService.HintSize="1566,672" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="2" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,455" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <sap:WorkflowViewStateService.ViewState>
@@ -172,7 +167,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NCheckState DisplayName="Check App State Error" sap:VirtualizedContainerService.HintSize="1520,672" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="1" Version="V3">
+            <uix:NCheckState DisplayName="Check App State Error" sap:VirtualizedContainerService.HintSize="1566,672" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="1" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,455" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
@@ -207,7 +202,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NCheckState DisplayName="Check App State Error" sap:VirtualizedContainerService.HintSize="1520,489" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="0" Version="V3">
+            <uix:NCheckState DisplayName="Check App State Error" sap:VirtualizedContainerService.HintSize="1566,489" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="0" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_13">
                   <sap:WorkflowViewStateService.ViewState>
@@ -235,7 +230,7 @@
                 <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/371a20d4-4f75-43a9-b492-4c40f5e3b206/employment/3a64ceaf-22e5-4d93-bcb8-5d1bd34a4e7a/details?payrollAdministrationId=39be01b2-340a-4a56-bca1-6103bb193bd3" DesignTimeRectangle="341, 593, 746, 48" DesignTimeScaleFactor="1" FriendlyName="'Er zijn'" FullSelectorArgument="&lt;webctrl tag='SPAN' parentclass='*alert alert-danger reverse ng-star-inserted' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='*alert alert-danger reverse ng-star-inserted' type='' aaname='' check:text='Er zijn nog mutaties na de datum uit dienst aanwezig bij de volgende gegevensgroepen: beloning,' /&gt;" Guid="8f1d07c9-1711-41b3-a3a0-de7daf034434" ImageBase64="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" InformativeScreenshot="04ba5adc81e53a1dfc28b89d61d1dc1e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <uix:NCheckState DisplayName="Check App State Opslaan button" sap:VirtualizedContainerService.HintSize="1520,1237" sap2010:WorkflowViewState.IdRef="NCheckState_1" Mode="WaitDisappear" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="1" Version="V3">
+            <uix:NCheckState DisplayName="Check App State Opslaan button" sap:VirtualizedContainerService.HintSize="1566,1359" sap2010:WorkflowViewState.IdRef="NCheckState_1" Mode="WaitDisappear" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="1" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -246,26 +241,34 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not disappear" sap:VirtualizedContainerService.HintSize="1016,1020" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Target does not disappear" sap:VirtualizedContainerService.HintSize="1062,1142" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NCheckState DisplayName="Check App State Error" sap:VirtualizedContainerService.HintSize="954,672" sap2010:WorkflowViewState.IdRef="NCheckState_5" Timeout="1" Version="V3">
+                  <uix:NCheckState DisplayName="Check App State Error" sap:VirtualizedContainerService.HintSize="1000,794" sap2010:WorkflowViewState.IdRef="NCheckState_5" Timeout="1" Version="V3">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,455" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,577" sap2010:WorkflowViewState.IdRef="Sequence_11">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NGetText DisplayName="Get Text Error" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" TextString="[out_ErrorWarning]" Version="V3">
+                        <uix:NGetText DisplayName="Get Text Error" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" TextString="[out_ErrorWarning]" Version="V3">
                           <uix:NGetText.Target>
-                            <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/cb8f2738-f520-4625-aeab-9dafa9bda935/employment/3a64ceaf-22e5-4d93-bcb8-5d1bd34a4e7a/employee?payrollAdministrationId=c8f80d16-b1cd-4008-9382-d3e1df3cab53" DesignTimeRectangle="742, 907, 254, 18" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'De waarde'" FullSelectorArgument="&lt;webctrl tag='P' aaname='*' parentclass='error-container ng-star-inserted' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' parentclass='error-container ng-star-inserted' type='' class='ellipsis error-text' /&gt;" Guid="1e817abd-6930-4871-aaab-e8690425ff8c" ImageBase64="" InformativeScreenshot="0473cb2632a3c39f61bd354124d53b0e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                            <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/cb8f2738-f520-4625-aeab-9dafa9bda935/employment/3a64ceaf-22e5-4d93-bcb8-5d1bd34a4e7a/employee?payrollAdministrationId=c8f80d16-b1cd-4008-9382-d3e1df3cab53" DesignTimeRectangle="742, 907, 254, 18" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'De waarde'" FullSelectorArgument="&lt;webctrl tag='P' parentclass='error-container*' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' parentclass='error-container ng-star-inserted' type='' class='ellipsis error-text' /&gt;" Guid="1e817abd-6930-4871-aaab-e8690425ff8c" ImageBase64="" InformativeScreenshot="0473cb2632a3c39f61bd354124d53b0e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                           </uix:NGetText.Target>
                         </uix:NGetText>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Gevonden error: &quot;+out_ErrorWarning]" />
+                        <Assign DisplayName="Assign melding Loket" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[out_ErrorWarning]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Melding Loket: "+ out_ErrorWarning]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Gevonden error: &quot;+out_ErrorWarning]" />
                       </Sequence>
                     </uix:NCheckState.IfExists>
                     <uix:NCheckState.IfNotExists>
@@ -278,10 +281,10 @@
                       </Sequence>
                     </uix:NCheckState.IfNotExists>
                     <uix:NCheckState.Target>
-                      <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/cb8f2738-f520-4625-aeab-9dafa9bda935/employment/3a64ceaf-22e5-4d93-bcb8-5d1bd34a4e7a/payroll/bank-payment?payrollAdministrationId=c8f80d16-b1cd-4008-9382-d3e1df3cab53" DesignTimeRectangle="722, 649, 12, 13" DesignTimeScaleFactor="1" FriendlyName="'EM'" FullSelectorArgument="&lt;webctrl tag='EM' parentclass='error-container ng-star-inserted' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='EM' parentclass='error-container ng-star-inserted' type='' class='icon icon-info' aaname='' /&gt;" Guid="09d51c68-670f-41a5-82a3-113662d54025" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABASURBVDhP7dG7CQAxDATR7b9h6wdrF+DETHac4IFQMIlkOH/gG4GZMaFYYUIZaUKVZUJdbULdZwH4F27HFzAw3g/nNJ1LDHn7AAAAAElFTkSuQmCC" InformativeScreenshot="3ce2e3f4dc6554fbe51c79fae4e868f4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="https://proforma.loket.nl/employer/cb8f2738-f520-4625-aeab-9dafa9bda935/employment/3a64ceaf-22e5-4d93-bcb8-5d1bd34a4e7a/payroll/bank-payment?payrollAdministrationId=c8f80d16-b1cd-4008-9382-d3e1df3cab53" DesignTimeRectangle="722, 649, 12, 13" DesignTimeScaleFactor="1" FriendlyName="'EM'" FullSelectorArgument="&lt;webctrl tag='EM' parentclass='error-container*' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='EM' parentclass='error-container ng-star-inserted' type='' class='icon icon-info' aaname='' /&gt;" Guid="09d51c68-670f-41a5-82a3-113662d54025" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABASURBVDhP7dG7CQAxDATR7b9h6wdrF+DETHac4IFQMIlkOH/gG4GZMaFYYUIZaUKVZUJdbULdZwH4F27HFzAw3g/nNJ1LDHn7AAAAAElFTkSuQmCC" InformativeScreenshot="3ce2e3f4dc6554fbe51c79fae4e868f4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                     </uix:NCheckState.Target>
                   </uix:NCheckState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Cancel" sap:VirtualizedContainerService.HintSize="954,193" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Cancel" sap:VirtualizedContainerService.HintSize="1000,193" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://app.loket.nl/employer/153efd1f-9720-4b87-8102-701eb340b919/employment/82d35ece-ebf0-475c-a1f8-ea8405ac3551/details?payrollAdministrationId=e6c3bf8e-75c5-4ba5-ae51-d40d8d6f6522" DesignTimeRectangle="1010, 234, 18, 18" DesignTimeScaleFactor="1" FriendlyName="'EM'" FullSelectorArgument="&lt;webctrl parentid='*cancel' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='*cancel' tag='EM' type='' class='icon icon-cancel' aaname='' /&gt;" Guid="a0593834-8271-472c-b0f3-d92c3bae425b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADZSURBVEhLY/hPIzBqMBzQ1+DLi7r+B7jV/E9b9BgqggkIqcFi8On/JVpZ/8VkIDhgNqbGy7Mb/6tA5cW0Jv/fCxVHBlgM/vh/W0Ux3GB0w1EMBWKriuP/P0DlkAGOMH7+f10WuuH3MA3N2vv/IVQHOsATeZiGI2N8hoIAHoNBALvhhAwFAQIGY4YpCGOLUHSA12BshhJrOE6DMSNq9f+ZGBGK23CsBuOOfWypBbvhWAxGzSCYEYVmODkZBHfsIwwnMYP8///9w1coCzfApwanwZSCUYOh4P9/AEd6yt69NLBYAAAAAElFTkSuQmCC" InformativeScreenshot="d6e558a6595736b28f74a5abe4bc1007.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Loket.nl' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                     </uix:NClick.Target>
@@ -308,9 +311,9 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NCheckState DisplayName="Check App State Onopgeslagen wijzigingen" sap:VirtualizedContainerService.HintSize="1520,1014" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="2" Version="V3">
+            <uix:NCheckState DisplayName="Check App State Onopgeslagen wijzigingen" sap:VirtualizedContainerService.HintSize="1566,1012" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="62642d0b-a4e1-4c99-9c9f-4b32a5f35ed1" Timeout="2" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="572,797" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="572,795" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
